@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pocitaco.oopsh.controllers.candidate.RegisterExamController" styleClass="content-area" spacing="20">
+    <children>
+        <Label styleClass="page-title" text="Register for Exam" />
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <children>
+                <Label text="Select Exam:" />
+                <MFXComboBox fx:id="cmbExams" HBox.hgrow="ALWAYS" />
+            </children>
+        </HBox>
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <children>
+                <MFXButton fx:id="btnRegister" styleClass="btn-primary" text="Register" />
+            </children>
+        </HBox>
+    </children>
+</VBox>

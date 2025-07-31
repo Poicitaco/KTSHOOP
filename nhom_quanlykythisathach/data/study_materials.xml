@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<studyMaterials>
+    <studyMaterial>
+        <id>1</id>
+        <title>Luật Giao thông đường bộ</title>
+        <description>Tài liệu học tập về luật giao thông đường bộ Việt Nam</description>
+        <fileUrl>materials/luat_giao_thong.pdf</fileUrl>
+        <examTypeId>1</examTypeId>
+        <uploadDate>2025-07-31</uploadDate>
+        <status>ACTIVE</status>
+    </studyMaterial>
+    <studyMaterial>
+        <id>2</id>
+        <title>Biển báo giao thông</title>
+        <description>Hướng dẫn nhận biết các biển báo giao thông</description>
+        <fileUrl>materials/bien_bao.pdf</fileUrl>
+        <examTypeId>1</examTypeId>
+        <uploadDate>2025-07-31</uploadDate>
+        <status>ACTIVE</status>
+    </studyMaterial>
+</studyMaterials> 

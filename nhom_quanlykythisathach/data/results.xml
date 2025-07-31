@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<results>
+    <result>
+        <id>1</id>
+        <userId>3</userId>
+        <examScheduleId>1</examScheduleId>
+        <examDate>2025-08-15</examDate>
+        <score>85.5</score>
+        <status>PASSED</status>
+        <theoryScore>88</theoryScore>
+        <practiceScore>83</practiceScore>
+        <notes>Thí sinh thực hiện tốt phần lý thuyết</notes>
+        <createdDate>2025-08-15</createdDate>
+    </result>
+    <result>
+        <id>2</id>
+        <userId>3</userId>
+        <examScheduleId>2</examScheduleId>
+        <examDate>2025-08-20</examDate>
+        <score>0</score>
+        <status>PENDING</status>
+        <theoryScore>0</theoryScore>
+        <practiceScore>0</practiceScore>
+        <notes></notes>
+        <createdDate>2025-08-20</createdDate>
+    </result>
+</results> 

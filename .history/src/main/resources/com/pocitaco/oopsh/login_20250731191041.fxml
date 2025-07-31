@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/11.0.1"
+   xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pocitaco.oopsh.controllers.LoginController">
+
+   <!-- Background with Material Design gradient -->
+   <Rectangle width="2000" height="2000" style="-fx-fill: linear-gradient(135deg, #1976D2 0%, #42A5F5 50%, #64B5F6 100%);" />
+
+   <!-- Main Content Container -->
+   <HBox alignment="CENTER" spacing="0" maxWidth="1000" maxHeight="600">
+
+      <!-- Left Side - Enhanced Logo and App Info -->
+      <VBox alignment="CENTER" spacing="40" style="-fx-background-color: rgba(255,255,255,0.08); -fx-background-radius: 0 25 25 0; -fx-padding: 60 50; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 20, 0, 0, 10);" prefWidth="500" prefHeight="600">
+
+         <!-- Enhanced Logo Container with multiple layers -->
+         <StackPane>
+            <!-- Outer glow circle -->
+            <Circle radius="95" style="-fx-fill: radial-gradient(center 50% 50%, radius 50%, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 70%, transparent 100%);" />
+            <!-- Main logo background -->
+            <Circle radius="85" style="-fx-fill: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%); -fx-stroke: rgba(255,255,255,0.4); -fx-stroke-width: 2;" />
+            <!-- Inner logo circle -->
+            <Circle radius="75" style="-fx-fill: white; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 15, 0, 0, 5);" />
+            <!-- Logo background -->
+            <Circle radius="70" style="-fx-fill: linear-gradient(135deg, #1976D2 0%, #42A5F5 100%);" />
+            <!-- Car icon -->
+            <Label text="🚗" style="-fx-font-size: 52; -fx-text-fill: white; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0, 0, 2);" />
+         </StackPane>
+
+         <!-- Enhanced App Title Section with animations -->
+         <VBox alignment="CENTER" spacing="20">
+            <!-- Main title with gradient text effect -->
+            <VBox alignment="CENTER" spacing="5">
+               <Label text="HỆ THỐNG SÁT HẠCH" style="-fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 28; -fx-font-weight: 300; -fx-text-fill: white; -fx-text-alignment: center; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 0, 1);" />
+               <Label text="BẰNG LÁI XE" style="-fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 32; -fx-font-weight: 700; -fx-text-fill: white; -fx-text-alignment: center; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0, 0, 2);" />
+            </VBox>
+
+            <!-- Subtitle with modern styling -->
+            <Label text="Driving License Examination System" style="-fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 16; -fx-font-weight: 300; -fx-text-fill: rgba(255,255,255,0.9); -fx-text-alignment: center; -fx-padding: 5 0;" />
+
+            <!-- Decorative line -->
+            <Rectangle width="80" height="3" style="-fx-fill: linear-gradient(to right, transparent, rgba(255,255,255,0.6), transparent); -fx-arc-width: 2; -fx-arc-height: 2;" />
+         </VBox>
+
+         <!-- Enhanced App Description with cards -->
+         <VBox alignment="CENTER" spacing="15" style="-fx-padding: 20 0;">
+            <!-- Feature cards -->
+            <HBox spacing="15" alignment="CENTER">
+               <!-- Card 1 -->
+               <VBox alignment="CENTER" spacing="8" style="-fx-background-color: rgba(255,255,255,0.1); -fx-background-radius: 12; -fx-padding: 15 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0, 0, 2);" prefWidth="120">
+                  <Label text="🛡️" style="-fx-font-size: 24;" />
+                  <Label text="An toàn" style="-fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 12; -fx-font-weight: 500; -fx-text-fill: white;" />
+               </VBox>
+
+               <!-- Card 2 -->
+               <VBox alignment="CENTER" spacing="8" style="-fx-background-color: rgba(255,255,255,0.1); -fx-background-radius: 12; -fx-padding: 15 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0, 0, 2);" prefWidth="120">
+                  <Label text="🎯" style="-fx-font-size: 24;" />
+                  <Label text="Chính xác" style="-fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 12; -fx-font-weight: 500; -fx-text-fill: white;" />
+               </VBox>
+
+               <!-- Card 3 -->
+               <VBox alignment="CENTER" spacing="8" style="-fx-background-color: rgba(255,255,255,0.1); -fx-background-radius: 12; -fx-padding: 15 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0, 0, 2);" prefWidth="120">
+                  <Label text="⚡" style="-fx-font-size: 24;" />
+                  <Label text="Hiệu quả" style="-fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 12; -fx-font-weight: 500; -fx-text-fill: white;" />
+               </VBox>
+            </HBox>
+
+            <!-- Description text -->
+            <VBox alignment="CENTER" spacing="8" style="-fx-padding: 15 0;">
+               <Label text="Hệ thống quản lý sát hạch bằng lái xe" style="-fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 18; -fx-font-weight: 400; -fx-text-fill: rgba(255,255,255,0.9); -fx-text-alignment: center;" />
+               <Label text="Được thiết kế để đảm bảo quy trình sát hạch minh bạch và hiệu quả" style="-fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 14; -fx-font-weight: 300; -fx-text-fill: rgba(255,255,255,0.7); -fx-text-alignment: center; -fx-wrap-text: true;" />
+            </VBox>
+         </VBox>
+
+         <!-- Enhanced Version Info with modern styling -->
+         <VBox alignment="CENTER" spacing="8" style="-fx-padding: 20 0;">
+            <!-- Version badge -->
+            <HBox alignment="CENTER" spacing="8" style="-fx-background-color: rgba(255,255,255,0.15); -fx-background-radius: 20; -fx-padding: 8 16;">
+               <Label text="v1.0.0" style="-fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 12; -fx-font-weight: 600; -fx-text-fill: white;" />
+               <Label text="•" style="-fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 12; -fx-text-fill: rgba(255,255,255,0.6);" />
+               <Label text="Beta" style="-fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 12; -fx-font-weight: 500; -fx-text-fill: #FFD700;" />
+            </HBox>
+
+            <!-- Copyright info -->
+            <VBox alignment="CENTER" spacing="3">
+               <Label text="© 2025 OOPSH System" style="-fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 11; -fx-text-fill: rgba(255,255,255,0.6);" />
+               <Label text="Powered by JavaFX & Material Design" style="-fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 10; -fx-text-fill: rgba(255,255,255,0.5);" />
+            </VBox>
+         </VBox>
+      </VBox>
+
+      <!-- Right Side - Login Form -->
+      <VBox alignment="CENTER" spacing="0" style="-fx-background-color: white; -fx-background-radius: 25 0 0 25; -fx-padding: 60 50; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 25, 0, 0, 10);" prefWidth="500" prefHeight="600">
+
+         <!-- Login Header -->
+         <VBox spacing="15" alignment="CENTER" style="-fx-padding: 0 0 40 0;">
+            <Label text="Đăng nhập" style="-fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 32; -fx-font-weight: 600; -fx-text-fill: #212121;" />
+            <Label text="Vui lòng nhập thông tin để tiếp tục" style="-fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 16; -fx-text-fill: #757575;" />
+         </VBox>
+
+         <!-- Form Fields -->
+         <VBox spacing="30" style="-fx-padding: 0 0 40 0;">
+            <!-- Username Field -->
+            <VBox spacing="8">
+               <Label text="Tên đăng nhập" style="-fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 14; -fx-font-weight: 500; -fx-text-fill: #424242;" />
+               <TextField fx:id="txtUsername" prefWidth="400" prefHeight="56" promptText="Nhập tên đăng nhập" styleClass="material-input" style="-fx-background-color: #F5F5F5; -fx-background-radius: 12; -fx-border-color: #E0E0E0; -fx-border-radius: 12; -fx-border-width: 1; -fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 16; -fx-text-fill: #212121; -fx-prompt-text-fill: #9E9E9E; -fx-padding: 16 20;" />
+            </VBox>
+
+            <!-- Password Field -->
+            <VBox spacing="8">
+               <Label text="Mật khẩu" style="-fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 14; -fx-font-weight: 500; -fx-text-fill: #424242;" />
+               <PasswordField fx:id="txtPassword" prefWidth="400" prefHeight="56" promptText="Nhập mật khẩu" styleClass="material-input" style="-fx-background-color: #F5F5F5; -fx-background-radius: 12; -fx-border-color: #E0E0E0; -fx-border-radius: 12; -fx-border-width: 1; -fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 16; -fx-text-fill: #212121; -fx-prompt-text-fill: #9E9E9E; -fx-padding: 16 20;" />
+            </VBox>
+         </VBox>
+
+         <!-- Action Section -->
+         <VBox spacing="25" alignment="CENTER">
+            <!-- Login Button with Material Design -->
+            <Button fx:id="btnLogin" text="ĐĂNG NHẬP" onAction="#handleLogin" prefWidth="400" prefHeight="56" styleClass="material-button" style="-fx-background-color: #1976D2; -fx-background-radius: 12; -fx-text-fill: white; -fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 16; -fx-font-weight: 600; -fx-cursor: hand; -fx-border-color: transparent; -fx-effect: dropshadow(gaussian, rgba(25,118,210,0.3), 12, 0, 0, 4);" />
+
+            <!-- Demo Accounts Info -->
+            <VBox spacing="8" alignment="CENTER" style="-fx-padding: 20 0 0 0;">
+               <Label text="Tài khoản demo:" style="-fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 12; -fx-text-fill: #757575;" />
+               <VBox spacing="2" alignment="CENTER">
+                  <Label text="Admin: admin / admin123" style="-fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 11; -fx-text-fill: #9E9E9E;" />
+                  <Label text="Examiner: giamthi001 / gt123456" style="-fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 11; -fx-text-fill: #9E9E9E;" />
+                  <Label text="Candidate: thisinh001 / ts123456" style="-fx-font-family: 'Segoe UI', 'Roboto', sans-serif; -fx-font-size: 11; -fx-text-fill: #9E9E9E;" />
+               </VBox>
+            </VBox>
+         </VBox>
+      </VBox>
+   </HBox>
+</StackPane>

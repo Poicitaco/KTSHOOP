@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXCard?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pocitaco.oopsh.controllers.admin.DashboardOverviewController" styleClass="content-area" spacing="20">
+    <children>
+        <Label styleClass="page-title" text="Admin Dashboard" />
+        <FlowPane hgap="20" vgap="20">
+            <children>
+                <!-- Total Users Card -->
+                <MFXCard styleClass="stat-card">
+                    <VBox spacing="10">
+                        <FontIcon iconLiteral="mdi2a-account-group" iconSize="32" />
+                        <Label fx:id="lblTotalUsers" styleClass="stat-number" text="0" />
+                        <Label styleClass="stat-label" text="Total Users" />
+                    </VBox>
+                </MFXCard>
+
+                <!-- Total Exams Card -->
+                <MFXCard styleClass="stat-card">
+                    <VBox spacing="10">
+                        <FontIcon iconLiteral="mdi2f-file-document" iconSize="32" />
+                        <Label fx:id="lblTotalExams" styleClass="stat-number" text="0" />
+                        <Label styleClass="stat-label" text="Total Exams" />
+                    </VBox>
+                </MFXCard>
+
+                <!-- Revenue Card -->
+                <MFXCard styleClass="stat-card">
+                    <VBox spacing="10">
+                        <FontIcon iconLiteral="mdi2c-currency-usd" iconSize="32" />
+                        <Label fx:id="lblTotalRevenue" styleClass="stat-number" text="$0.00" />
+                        <Label styleClass="stat-label" text="Total Revenue" />
+                    </VBox>
+                </MFXCard>
+
+                <!-- Pending Registrations Card -->
+                <MFXCard styleClass="stat-card">
+                    <VBox spacing="10">
+                        <FontIcon iconLiteral="mdi2a-account-clock" iconSize="32" />
+                        <Label fx:id="lblPendingRegistrations" styleClass="stat-number" text="0" />
+                        <Label styleClass="stat-label" text="Pending Registrations" />
+                    </VBox>
+                </MFXCard>
+            </children>
+        </FlowPane>
+        <!-- Add more dashboard components like charts or recent activity tables here -->
+    </children>
+</VBox>

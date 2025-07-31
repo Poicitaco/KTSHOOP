@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pocitaco.oopsh.controllers.MainLayoutController">
+   <left>
+      <VBox fx:id="sidebar" prefWidth="280.0" styleClass="sidebar">
+         <children>
+            <!-- Header with user info -->
+            <VBox styleClass="sidebar-header">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="15.0">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label fx:id="lblUserName" styleClass="user-name" text="User Name" />
+                              <Label fx:id="lblUserRole" styleClass="user-role" text="Role" />
+                           </children>
+                        </VBox>
+                        <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#handleLogout" styleClass="logout-btn" text="Logout" />
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            
+            <!-- Navigation Menu -->
+            <ScrollPane fitToWidth="true" hbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+               <content>
+                  <VBox fx:id="navigationMenu" spacing="5.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </left>
+   
+   <center>
+      <VBox styleClass="main-content">
+         <children>
+            <!-- Top bar with breadcrumb and actions -->
+            <HBox fx:id="topBar" alignment="CENTER_LEFT" styleClass="top-bar">
+               <children>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="lblPageTitle" styleClass="page-title" text="Dashboard" />
+                        <Label fx:id="lblBreadcrumb" styleClass="breadcrumb" text="Home" />
+                     </children>
+                  </VBox>
+                  <HBox fx:id="actionButtons" spacing="10.0">
+                     <!-- Action buttons will be added dynamically -->
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+               </padding>
+            </HBox>
+            
+            <!-- Content area -->
+            <StackPane fx:id="contentArea" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox fx:id="defaultContent" alignment="CENTER" spacing="20.0">
+                     <children>
+                        <Label styleClass="welcome-text" text="Welcome to OOPSH System" />
+                        <Label styleClass="welcome-subtitle" text="Select a menu item to get started" />
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
+            </VBox>
+         </children>
+      </StackPane>
+   </center>
+   <stylesheets>
+      <URL value="@styles/material-design.css" />
+   </stylesheets>
+</BorderPane>

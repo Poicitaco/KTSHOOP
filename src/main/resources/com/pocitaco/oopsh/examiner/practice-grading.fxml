@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pocitaco.oopsh.controllers.examiner.PracticeGradingController" styleClass="content-area" spacing="20">
+    <children>
+        <Label styleClass="page-title" text="Practice Grading" />
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Exam Session:" />
+            <Label fx:id="lblExamSession" />
+        </HBox>
+        <MFXTableView fx:id="tblCandidates" VBox.vgrow="ALWAYS" />
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <MFXButton fx:id="btnSaveGrades" styleClass="btn-primary" text="Save Grades" />
+        </HBox>
+    </children>
+</VBox>

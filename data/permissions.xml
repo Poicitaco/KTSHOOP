@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<permissions>
+    <permission>
+        <id>1</id>
+        <name>USER_MANAGEMENT</name>
+        <description>Quản lý người dùng</description>
+        <status>ACTIVE</status>
+    </permission>
+    <permission>
+        <id>2</id>
+        <name>EXAM_MANAGEMENT</name>
+        <description>Quản lý kỳ thi</description>
+        <status>ACTIVE</status>
+    </permission>
+    <permission>
+        <id>3</id>
+        <name>GRADING</name>
+        <description>Chấm điểm thi</description>
+        <status>ACTIVE</status>
+    </permission>
+    <permission>
+        <id>4</id>
+        <name>REPORTING</name>
+        <description>Xem báo cáo</description>
+        <status>ACTIVE</status>
+    </permission>
+</permissions> 

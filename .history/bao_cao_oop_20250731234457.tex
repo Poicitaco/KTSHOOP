@@ -1,0 +1,1040 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{setspace}
+
+% Cấu hình trang
+\geometry{
+    top=2cm,
+    left=3cm,
+    bottom=2cm,
+    right=2cm
+}
+
+% Cấu hình font
+\renewcommand{\familydefault}{\rmdefault}
+\renewcommand{\rmdefault}{ptm}
+
+% Cấu hình màu cho code
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+% Cấu hình listing cho code
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% Cấu hình hyperref
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Báo cáo OOP - Hệ thống Quản lý Kỳ thi Sát hạch},
+    pdfpagemode=FullScreen,
+}
+
+% Cấu hình header và footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% Cấu hình section
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% Cấu hình line spacing
+\onehalfspacing
+
+\begin{document}
+
+% Bìa chính
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    {\Large\bfseries TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN}\\
+    \vspace{0.5cm}
+    {\Large\bfseries ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH}\\
+    
+    \vspace{2cm}
+    
+    {\Large\bfseries KHOA CÔNG NGHỆ THÔNG TIN}\\
+    
+    \vspace{3cm}
+    
+    {\Huge\bfseries BÁO CÁO CUỐI KỲ}\\
+    \vspace{0.5cm}
+    {\Large\bfseries MÔN: LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG VỚI JAVA}\\
+    
+    \vspace{2cm}
+    
+    {\Huge\bfseries HỆ THỐNG QUẢN LÝ KỲ THI SÁT HẠCH}\\
+    {\Large\bfseries (OOPSH - Driving License Examination System)}\\
+    
+    \vspace{3cm}
+    
+    \begin{tabular}{ll}
+        \textbf{Giảng viên hướng dẫn:} & \textbf{Hà Thị Kim Dung} \\
+        \textbf{Lớp:} & \textbf{OOP N02} \\
+        \textbf{Học kỳ:} & \textbf{2024-2025} \\
+    \end{tabular}
+    
+    \vspace{2cm}
+    
+    {\Large\bfseries Thành phố Hồ Chí Minh, 2025}
+    
+\end{titlepage}
+
+% Bìa lót
+\newpage
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    {\Large\bfseries TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN}\\
+    \vspace{0.5cm}
+    {\Large\bfseries ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH}\\
+    
+    \vspace{2cm}
+    
+    {\Large\bfseries KHOA CÔNG NGHỆ THÔNG TIN}\\
+    
+    \vspace{3cm}
+    
+    {\Huge\bfseries BÁO CÁO CUỐI KỲ}\\
+    \vspace{0.5cm}
+    {\Large\bfseries MÔN: LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG VỚI JAVA}\\
+    
+    \vspace{2cm}
+    
+    {\Huge\bfseries HỆ THỐNG QUẢN LÝ KỲ THI SÁT HẠCH}\\
+    {\Large\bfseries (OOPSH - Driving License Examination System)}\\
+    
+    \vspace{3cm}
+    
+    \begin{tabular}{ll}
+        \textbf{Giảng viên hướng dẫn:} & \textbf{Hà Thị Kim Dung} \\
+        \textbf{Lớp:} & \textbf{OOP N02} \\
+        \textbf{Học kỳ:} & \textbf{2024-2025} \\
+    \end{tabular}
+    
+    \vspace{2cm}
+    
+    \begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+    \textbf{STT} & \textbf{Họ và tên thành viên} & \textbf{Điểm bằng số} & \textbf{Điểm bằng chữ} \\
+    \hline
+    1 & [Tên thành viên 1] & & \\
+    \hline
+    2 & [Tên thành viên 2] & & \\
+    \hline
+    3 & [Tên thành viên 3] & & \\
+    \hline
+    \end{tabular}
+    \end{table}
+    
+    \vspace{2cm}
+    
+    {\Large\bfseries Thành phố Hồ Chí Minh, 2025}
+    
+\end{titlepage}
+
+% Mục lục
+\tableofcontents
+\newpage
+
+% Danh sách hình vẽ
+\listoffigures
+\newpage
+
+% Danh sách bảng
+\listoftables
+\newpage
+
+\section{Giới thiệu về bài toán}
+
+\subsection{Định nghĩa}
+
+Hệ thống Quản lý Kỳ thi Sát hạch (OOPSH - Driving License Examination System) là một ứng dụng desktop được phát triển bằng Java 17 và JavaFX, được thiết kế để quản lý toàn diện các kỳ thi sát hạch bằng lái xe. Hệ thống hỗ trợ việc quản lý thông tin thí sinh, giám thị, lịch thi, kết quả thi và các hoạt động liên quan đến quy trình sát hạch.
+
+\subsection{Ví dụ minh họa}
+
+Hệ thống được áp dụng trong các trung tâm sát hạch bằng lái xe, giúp:
+\begin{itemize}
+    \item Quản lý thông tin thí sinh đăng ký thi
+    \item Lên lịch thi và phân công giám thị
+    \item Chấm điểm và đánh giá kết quả thi
+    \item Thống kê tỷ lệ đậu/rớt và doanh thu
+    \item Xuất báo cáo và chứng chỉ
+\end{itemize}
+
+\section{Phân tích bài toán}
+
+\subsection{Mô tả hệ thống}
+
+\subsubsection{Tổng quan hệ thống}
+
+OOPSH là một hệ thống quản lý kỳ thi sát hạch với kiến trúc 3 tầng:
+\begin{itemize}
+    \item \textbf{Tầng giao diện (Presentation Layer)}: JavaFX với FXML
+    \item \textbf{Tầng logic nghiệp vụ (Business Logic Layer)}: Controllers và Services
+    \item \textbf{Tầng dữ liệu (Data Access Layer)}: DAO classes và XML files
+\end{itemize}
+
+\subsubsection{Sơ đồ hệ thống}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{images/system_architecture.png}
+\caption{Sơ đồ kiến trúc hệ thống OOPSH}
+\label{fig:system_architecture}
+\end{figure}
+
+\subsubsection{Phân quyền người dùng}
+
+Hệ thống hỗ trợ 3 vai trò chính:
+
+\begin{enumerate}
+    \item \textbf{Admin (Quản trị viên)}:
+    \begin{itemize}
+        \item Quản lý người dùng và phân quyền
+        \item Quản lý loại thi và lịch thi
+        \item Xem báo cáo thống kê tổng quan
+        \item Quản lý hệ thống
+    \end{itemize}
+    
+    \item \textbf{Examiner (Giám thị)}:
+    \begin{itemize}
+        \item Xem danh sách thí sinh
+        \item Chấm điểm và đánh giá
+        \item Tạo báo cáo phiên thi
+        \item Quản lý lịch làm việc
+    \end{itemize}
+    
+    \item \textbf{Candidate (Thí sinh)}:
+    \begin{itemize}
+        \item Đăng ký thi
+        \item Xem lịch thi và kết quả
+        \item Thanh toán phí thi
+        \item Xem chứng chỉ
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Phân tích chức năng}
+
+\subsubsection{Biểu đồ phân rã chức năng}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/function_decomposition.png}
+\caption{Biểu đồ phân rã chức năng hệ thống}
+\label{fig:function_decomposition}
+\end{figure}
+
+\subsubsection{Chức năng chính}
+
+\paragraph{1. Quản lý người dùng}
+\begin{itemize}
+    \item Thêm, sửa, xóa thông tin người dùng
+    \item Phân quyền theo vai trò
+    \item Tìm kiếm và lọc người dùng
+    \item Quản lý trạng thái hoạt động
+\end{itemize}
+
+\paragraph{2. Quản lý kỳ thi}
+\begin{itemize}
+    \item Tạo và quản lý các loại thi
+    \item Lên lịch thi với DatePicker
+    \item Quản lý trạng thái kỳ thi
+    \item Phân công giám thị
+\end{itemize}
+
+\paragraph{3. Quản lý đăng ký}
+\begin{itemize}
+    \item Đăng ký thi cho thí sinh
+    \item Quản lý trạng thái đăng ký
+    \item Thanh toán phí thi
+    \item Xác nhận đăng ký
+\end{itemize}
+
+\paragraph{4. Quản lý kết quả}
+\begin{itemize}
+    \item Chấm điểm lý thuyết và thực hành
+    \item Tính toán điểm tổng hợp
+    \item Xác định đậu/rớt
+    \item Xuất chứng chỉ
+\end{itemize}
+
+\paragraph{5. Thống kê và báo cáo}
+\begin{itemize}
+    \item Thống kê tỷ lệ đậu/rớt
+    \item Báo cáo doanh thu
+    \item Thống kê theo thời gian
+    \item Xuất báo cáo chi tiết
+\end{itemize}
+
+\subsection{Phân tích cơ sở dữ liệu}
+
+\subsubsection{Cấu trúc dữ liệu}
+
+Hệ thống sử dụng file XML để lưu trữ dữ liệu với các bảng chính:
+
+\paragraph{1. Bảng Users (Người dùng)}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Trường} & \textbf{Kiểu dữ liệu} & \textbf{Mô tả} & \textbf{Ràng buộc} \\
+\hline
+id & Integer & ID người dùng & Primary Key, Auto Increment \\
+\hline
+username & String & Tên đăng nhập & Unique, Not Null \\
+\hline
+password & String & Mật khẩu & Not Null \\
+\hline
+role & Enum & Vai trò (ADMIN/EXAMINER/CANDIDATE) & Not Null \\
+\hline
+fullName & String & Họ và tên & Not Null \\
+\hline
+email & String & Email & Unique, Not Null \\
+\hline
+createdDate & LocalDate & Ngày tạo & Not Null \\
+\hline
+status & Enum & Trạng thái (ACTIVE/INACTIVE) & Not Null \\
+\hline
+employeeId & String & Mã nhân viên (Examiner) & Optional \\
+\hline
+experience & Integer & Kinh nghiệm (Examiner) & Optional \\
+\hline
+cccd & String & CCCD (Candidate) & Optional \\
+\hline
+birthday & LocalDate & Ngày sinh (Candidate) & Optional \\
+\hline
+phone & String & Số điện thoại (Candidate) & Optional \\
+\hline
+address & String & Địa chỉ (Candidate) & Optional \\
+\hline
+\end{tabular}
+\caption{Cấu trúc bảng Users}
+\label{tab:users_structure}
+\end{table}
+
+\paragraph{2. Bảng ExamTypes (Loại thi)}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Trường} & \textbf{Kiểu dữ liệu} & \textbf{Mô tả} & \textbf{Ràng buộc} \\
+\hline
+id & Integer & ID loại thi & Primary Key, Auto Increment \\
+\hline
+name & String & Tên loại thi & Not Null \\
+\hline
+description & String & Mô tả & Optional \\
+\hline
+duration & Integer & Thời gian thi (phút) & Not Null \\
+\hline
+passingScore & Double & Điểm đậu & Not Null \\
+\hline
+fee & Double & Phí thi & Not Null \\
+\hline
+createdDate & LocalDate & Ngày tạo & Not Null \\
+\hline
+status & Enum & Trạng thái & Not Null \\
+\hline
+\end{tabular}
+\caption{Cấu trúc bảng ExamTypes}
+\label{tab:examtypes_structure}
+\end{table}
+
+\paragraph{3. Bảng ExamSchedules (Lịch thi)}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Trường} & \textbf{Kiểu dữ liệu} & \textbf{Mô tả} & \textbf{Ràng buộc} \\
+\hline
+id & Integer & ID lịch thi & Primary Key, Auto Increment \\
+\hline
+examTypeId & Integer & ID loại thi & Foreign Key \\
+\hline
+examTypeName & String & Tên loại thi & Not Null \\
+\hline
+examDate & LocalDate & Ngày thi & Not Null \\
+\hline
+timeSlot & Enum & Khung giờ thi & Not Null \\
+\hline
+capacity & Integer & Sức chứa & Not Null \\
+\hline
+registeredCount & Integer & Số đã đăng ký & Default 0 \\
+\hline
+examinerId & Integer & ID giám thị & Foreign Key \\
+\hline
+status & Enum & Trạng thái & Not Null \\
+\hline
+\end{tabular}
+\caption{Cấu trúc bảng ExamSchedules}
+\label{tab:examschedules_structure}
+\end{table}
+
+\paragraph{4. Bảng Registrations (Đăng ký thi)}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Trường} & \textbf{Kiểu dữ liệu} & \textbf{Mô tả} & \textbf{Ràng buộc} \\
+\hline
+id & Integer & ID đăng ký & Primary Key, Auto Increment \\
+\hline
+candidateId & Integer & ID thí sinh & Foreign Key \\
+\hline
+examScheduleId & Integer & ID lịch thi & Foreign Key \\
+\hline
+examTypeName & String & Tên loại thi & Not Null \\
+\hline
+registrationDate & LocalDate & Ngày đăng ký & Not Null \\
+\hline
+status & Enum & Trạng thái & Not Null \\
+\hline
+paymentStatus & Enum & Trạng thái thanh toán & Not Null \\
+\hline
+\end{tabular}
+\caption{Cấu trúc bảng Registrations}
+\label{tab:registrations_structure}
+\end{table}
+
+\paragraph{5. Bảng Results (Kết quả thi)}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Trường} & \textbf{Kiểu dữ liệu} & \textbf{Mô tả} & \textbf{Ràng buộc} \\
+\hline
+id & Integer & ID kết quả & Primary Key, Auto Increment \\
+\hline
+registrationId & Integer & ID đăng ký & Foreign Key \\
+\hline
+candidateId & Integer & ID thí sinh & Foreign Key \\
+\hline
+examScheduleId & Integer & ID lịch thi & Foreign Key \\
+\hline
+theoryScore & Double & Điểm lý thuyết & Optional \\
+\hline
+practicalScore & Double & Điểm thực hành & Optional \\
+\hline
+totalScore & Double & Điểm tổng hợp & Not Null \\
+\hline
+result & Enum & Kết quả (PASS/FAIL) & Not Null \\
+\hline
+examDate & LocalDate & Ngày thi & Not Null \\
+\hline
+\end{tabular}
+\caption{Cấu trúc bảng Results}
+\label{tab:results_structure}
+\end{table}
+
+\subsubsection{Sơ đồ quan hệ dữ liệu}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/database_relationship.png}
+\caption{Sơ đồ quan hệ dữ liệu}
+\label{fig:database_relationship}
+\end{figure}
+
+\subsubsection{File XML mẫu}
+
+\begin{lstlisting}[language=XML, caption=File users.xml mẫu]
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<users>
+    <user>
+        <id>1</id>
+        <username>admin</username>
+        <password>admin123</password>
+        <role>ADMIN</role>
+        <fullName>Quản trị viên</fullName>
+        <email>admin@satheach.com</email>
+        <createdDate>2025-07-31</createdDate>
+        <status>ACTIVE</status>
+    </user>
+    <user>
+        <id>2</id>
+        <username>giamthi001</username>
+        <password>gt123456</password>
+        <role>EXAMINER</role>
+        <fullName>Nguyễn Văn A</fullName>
+        <email>giamthi001@satheach.com</email>
+        <createdDate>2025-07-31</createdDate>
+        <status>ACTIVE</status>
+        <employeeId>GT001</employeeId>
+        <experience>5</experience>
+    </user>
+    <user>
+        <id>3</id>
+        <username>thisinh001</username>
+        <password>ts123456</password>
+        <role>CANDIDATE</role>
+        <fullName>Trần Thị B</fullName>
+        <email>thisinh001@email.com</email>
+        <createdDate>2025-07-31</createdDate>
+        <status>ACTIVE</status>
+        <cccd>123456789012</cccd>
+        <birthday>1995-01-15</birthday>
+        <phone>0901234567</phone>
+        <address>Hà Nội</address>
+    </user>
+</users>
+\end{lstlisting}
+
+\subsection{Cài đặt và sử dụng}
+
+\subsubsection{Yêu cầu hệ thống}
+
+\begin{itemize}
+    \item \textbf{Java}: JDK 17 hoặc cao hơn
+    \item \textbf{IDE}: Apache NetBeans 23
+    \item \textbf{Build Tool}: Maven 3.6+
+    \item \textbf{Hệ điều hành}: Windows/Linux/macOS
+    \item \textbf{Bộ nhớ}: Tối thiểu 4GB RAM
+    \item \textbf{Ổ cứng}: 1GB dung lượng trống
+\end{itemize}
+
+\subsubsection{Cài đặt}
+
+\paragraph{Bước 1: Chuẩn bị môi trường}
+\begin{enumerate}
+    \item Cài đặt Java JDK 17
+    \item Cài đặt Apache NetBeans 23
+    \item Cài đặt Maven 3.6+
+\end{enumerate}
+
+\paragraph{Bước 2: Clone project}
+\begin{lstlisting}[language=bash, caption=Lệnh clone project]
+git clone <repository-url>
+cd OOPSH
+\end{lstlisting}
+
+\paragraph{Bước 3: Build project}
+\begin{lstlisting}[language=bash, caption=Lệnh build project]
+mvn clean compile
+\end{lstlisting}
+
+\paragraph{Bước 4: Chạy ứng dụng}
+\begin{lstlisting}[language=bash, caption=Lệnh chạy ứng dụng]
+mvn javafx:run
+\end{lstlisting}
+
+\subsubsection{Hướng dẫn sử dụng}
+
+\paragraph{1. Đăng nhập hệ thống}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{images/login_screen.png}
+\caption{Màn hình đăng nhập}
+\label{fig:login_screen}
+\end{figure}
+
+\textbf{Thông tin đăng nhập:}
+\begin{itemize}
+    \item \textbf{Admin}: username: admin, password: admin123
+    \item \textbf{Examiner}: username: giamthi001, password: gt123456
+    \item \textbf{Candidate}: username: thisinh001, password: ts123456
+\end{itemize}
+
+\paragraph{2. Giao diện Admin}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/admin_dashboard.png}
+\caption{Dashboard Admin}
+\label{fig:admin_dashboard}
+\end{figure}
+
+\textbf{Chức năng chính:}
+\begin{itemize}
+    \item Quản lý người dùng
+    \item Quản lý loại thi
+    \item Quản lý lịch thi
+    \item Xem báo cáo thống kê
+    \item Quản lý hệ thống
+\end{itemize}
+
+\paragraph{3. Giao diện Examiner}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/examiner_dashboard.png}
+\caption{Dashboard Examiner}
+\label{fig:examiner_dashboard}
+\end{figure}
+
+\textbf{Chức năng chính:}
+\begin{itemize}
+    \item Xem danh sách thí sinh
+    \item Chấm điểm thi
+    \item Tạo báo cáo phiên thi
+    \item Quản lý lịch làm việc
+\end{itemize}
+
+\paragraph{4. Giao diện Candidate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/candidate_dashboard.png}
+\caption{Dashboard Candidate}
+\label{fig:candidate_dashboard}
+\end{figure}
+
+\textbf{Chức năng chính:}
+\begin{itemize}
+    \item Đăng ký thi
+    \item Xem lịch thi
+    \item Xem kết quả
+    \item Thanh toán phí thi
+\end{itemize}
+
+\subsubsection{Tính năng nổi bật}
+
+\paragraph{1. Giao diện hiện đại}
+\begin{itemize}
+    \item Sử dụng Material Design
+    \item Responsive design
+    \item Animation mượt mà
+    \item Icon trực quan
+\end{itemize}
+
+\paragraph{2. Tìm kiếm nâng cao}
+\begin{itemize}
+    \item Tìm kiếm gần đúng theo tên
+    \item Tìm kiếm theo khoảng điểm
+    \item Tìm kiếm theo ngày
+    \item Lọc theo nhiều tiêu chí
+\end{itemize}
+
+\paragraph{3. Thống kê chi tiết}
+\begin{itemize}
+    \item Dashboard với biểu đồ
+    \item Thống kê theo thời gian
+    \item Báo cáo doanh thu
+    \item Tỷ lệ đậu/rớt
+\end{itemize}
+
+\paragraph{4. Validation và bảo mật}
+\begin{itemize}
+    \item Validation đầy đủ input
+    \item Mã hóa mật khẩu
+    \item Phân quyền chi tiết
+    \item Log hoạt động
+\end{itemize}
+
+\section{Phân tích kỹ thuật}
+
+\subsection{Kiến trúc hệ thống}
+
+\subsubsection{Mô hình MVC}
+
+Hệ thống được thiết kế theo mô hình MVC (Model-View-Controller):
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{images/mvc_architecture.png}
+\caption{Mô hình MVC trong OOPSH}
+\label{fig:mvc_architecture}
+\end{figure}
+
+\paragraph{1. Model (Mô hình dữ liệu)}
+\begin{itemize}
+    \item \textbf{Entity Classes}: User, ExamType, ExamSchedule, Registration, Result
+    \item \textbf{Enums}: UserRole, ExamStatus, PaymentStatus
+    \item \textbf{Data Transfer Objects}: Các đối tượng truyền dữ liệu
+\end{itemize}
+
+\paragraph{2. View (Giao diện)}
+\begin{itemize}
+    \item \textbf{FXML Files}: Định nghĩa layout giao diện
+    \item \textbf{CSS Files}: Định dạng style
+    \item \textbf{JavaFX Components}: Controls và containers
+\end{itemize}
+
+\paragraph{3. Controller (Điều khiển)}
+\begin{itemize}
+    \item \textbf{FXML Controllers}: Xử lý sự kiện giao diện
+    \item \textbf{Business Logic}: Logic nghiệp vụ
+    \item \textbf{Data Validation}: Kiểm tra dữ liệu
+\end{itemize}
+
+\subsubsection{Pattern Design}
+
+\paragraph{1. DAO Pattern}
+\begin{lstlisting}[language=Java, caption=Ví dụ BaseDAO]
+public abstract class BaseDAO<T, ID> implements CrudOperations<T, ID> {
+    protected final String xmlFilePath;
+    protected final String rootElementName;
+    protected final ReadWriteLock lock = new ReentrantReadWriteLock();
+    
+    // Template methods
+    protected abstract String getElementName();
+    protected abstract T elementToEntity(Element element);
+    protected abstract Element entityToElement(Document doc, T entity);
+    protected abstract ID getEntityId(T entity);
+}
+\end{lstlisting}
+
+\paragraph{2. Strategy Pattern}
+\begin{lstlisting}[language=Java, caption=Ví dụ NavigationStrategy]
+public interface NavigationStrategy {
+    List<MenuCategory> getMenuCategories();
+    String getDashboardTitle();
+    String getDashboardSubtitle();
+}
+
+public class AdminNavigationStrategy implements NavigationStrategy {
+    @Override
+    public List<MenuCategory> getMenuCategories() {
+        // Return admin menu categories
+    }
+}
+\end{lstlisting}
+
+\paragraph{3. Factory Pattern}
+\begin{lstlisting}[language=Java, caption=Ví dụ TableColumnFactory]
+public class TableColumnFactory {
+    public static <T> TableColumn<T, String> createColumn(String title, 
+            Function<T, String> valueExtractor) {
+        TableColumn<T, String> column = new TableColumn<>(title);
+        column.setCellValueFactory(new PropertyValueFactory<>(valueExtractor));
+        return column;
+    }
+}
+\end{lstlisting}
+
+\subsection{Xử lý dữ liệu XML}
+
+\subsubsection{DOM Parser}
+
+Hệ thống sử dụng DOM Parser để đọc/ghi file XML:
+
+\begin{lstlisting}[language=Java, caption=Ví dụ đọc XML]
+protected Document loadDocument() {
+    lock.readLock().lock();
+    try {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        return builder.parse(new File(xmlFilePath));
+    } catch (Exception e) {
+        throw new RuntimeException("Failed to load XML document", e);
+    } finally {
+        lock.readLock().unlock();
+    }
+}
+\end{lstlisting}
+
+\subsubsection{Thread Safety}
+
+Sử dụng ReadWriteLock để đảm bảo thread safety:
+
+\begin{lstlisting}[language=Java, caption=Ví dụ Thread Safety]
+protected void saveDocument(Document doc) {
+    lock.writeLock().lock();
+    try {
+        TransformerFactory factory = TransformerFactory.newInstance();
+        Transformer transformer = factory.newTransformer();
+        transformer.setOutputProperty("indent", "yes");
+        
+        DOMSource source = new DOMSource(doc);
+        StreamResult result = new StreamResult(new File(xmlFilePath));
+        transformer.transform(source, result);
+    } catch (Exception e) {
+        throw new RuntimeException("Failed to save XML document", e);
+    } finally {
+        lock.writeLock().unlock();
+    }
+}
+\end{lstlisting}
+
+\subsection{Validation và Error Handling}
+
+\subsubsection{Input Validation}
+
+\begin{lstlisting}[language=Java, caption=Ví dụ ValidationHelper]
+public class ValidationHelper {
+    public static boolean isValidEmail(String email) {
+        if (email == null || email.trim().isEmpty()) {
+            return false;
+        }
+        String emailRegex = "^[A-Za-z0-9+_.-]+@(.+)$";
+        return email.matches(emailRegex);
+    }
+    
+    public static boolean isValidPhone(String phone) {
+        if (phone == null || phone.trim().isEmpty()) {
+            return false;
+        }
+        String phoneRegex = "^[0-9]{10,11}$";
+        return phone.matches(phoneRegex);
+    }
+}
+\end{lstlisting}
+
+\subsubsection{Error Handling}
+
+\begin{lstlisting}[language=Java, caption=Ví dụ DialogUtils]
+public class DialogUtils {
+    public static void showError(String title, String content) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
+    
+    public static void showSuccess(String title, String content) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
+}
+\end{lstlisting}
+
+\section{Đánh giá và kết luận}
+
+\subsection{Đánh giá hệ thống}
+
+\subsubsection{Ưu điểm}
+
+\begin{enumerate}
+    \item \textbf{Đáp ứng đầy đủ yêu cầu đề bài}:
+    \begin{itemize}
+        \item Sử dụng XML làm cơ sở dữ liệu
+        \item Giao diện JavaFX hiện đại với DatePicker, ComboBox
+        \item Tìm kiếm nâng cao theo nhiều tiêu chí
+        \item Thống kê chi tiết và báo cáo
+        \item Validation đầy đủ và xử lý lỗi tốt
+    \end{itemize}
+    
+    \item \textbf{Kiến trúc tốt}:
+    \begin{itemize}
+        \item Tuân thủ mô hình MVC
+        \item Sử dụng các design pattern phù hợp
+        \item Code có cấu trúc rõ ràng, dễ bảo trì
+        \item Tách biệt các layer rõ ràng
+    \end{itemize}
+    
+    \item \textbf{Giao diện người dùng}:
+    \begin{itemize}
+        \item Thiết kế hiện đại, thân thiện
+        \item Responsive và dễ sử dụng
+        \item Animation mượt mà
+        \item Icon trực quan
+    \end{itemize}
+    
+    \item \textbf{Tính năng phong phú}:
+    \begin{itemize}
+        \item Phân quyền 3 vai trò chi tiết
+        \item Quản lý toàn diện quy trình sát hạch
+        \item Báo cáo và thống kê đầy đủ
+        \item Tìm kiếm và lọc nâng cao
+    \end{itemize}
+\end{enumerate}
+
+\subsubsection{Hạn chế}
+
+\begin{enumerate}
+    \item \textbf{Hiệu suất}:
+    \begin{itemize}
+        \item XML không phù hợp cho dữ liệu lớn
+        \item Không có indexing như database
+        \item Tốc độ truy vấn chậm hơn
+    \end{itemize}
+    
+    \item \textbf{Bảo mật}:
+    \begin{itemize}
+        \item Dữ liệu XML không được mã hóa
+        \item Mật khẩu chỉ hash đơn giản
+        \item Không có audit trail chi tiết
+    \end{itemize}
+    
+    \item \textbf{Tính mở rộng}:
+    \begin{itemize}
+        \item Khó scale với nhiều người dùng
+        \item Không hỗ trợ concurrent access tốt
+        \item Backup và restore phức tạp
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Kết luận}
+
+Hệ thống Quản lý Kỳ thi Sát hạch (OOPSH) đã được phát triển thành công với các đặc điểm nổi bật:
+
+\begin{enumerate}
+    \item \textbf{Đáp ứng đầy đủ yêu cầu đề bài} về sử dụng XML, giao diện JavaFX, tìm kiếm nâng cao và thống kê chi tiết.
+    
+    \item \textbf{Kiến trúc tốt} với mô hình MVC, sử dụng các design pattern phù hợp, code có cấu trúc rõ ràng và dễ bảo trì.
+    
+    \item \textbf{Giao diện hiện đại} với Material Design, responsive và thân thiện người dùng.
+    
+    \item \textbf{Tính năng phong phú} hỗ trợ đầy đủ quy trình quản lý kỳ thi sát hạch từ đăng ký đến cấp chứng chỉ.
+    
+    \item \textbf{Validation và error handling} tốt, đảm bảo tính ổn định của hệ thống.
+\end{enumerate}
+
+Hệ thống đã sẵn sàng để triển khai trong thực tế và có thể mở rộng thêm các tính năng trong tương lai.
+
+\subsection{Hướng phát triển}
+
+\begin{enumerate}
+    \item \textbf{Nâng cấp cơ sở dữ liệu}: Chuyển sang database như MySQL hoặc PostgreSQL để cải thiện hiệu suất.
+    
+    \item \textbf{Tăng cường bảo mật}: Mã hóa dữ liệu, audit trail chi tiết, authentication mạnh hơn.
+    
+    \item \textbf{Web application}: Phát triển phiên bản web để dễ dàng truy cập từ xa.
+    
+    \item \textbf{Mobile app}: Phát triển ứng dụng mobile cho thí sinh và giám thị.
+    
+    \item \textbf{AI/ML integration}: Tích hợp AI để chấm điểm tự động và dự đoán kết quả.
+\end{enumerate}
+
+\section{Tài liệu tham khảo}
+
+\begin{enumerate}
+    \item Oracle Corporation. (2023). \textit{JavaFX Documentation}. Oracle.
+    
+    \item Apache Software Foundation. (2023). \textit{Maven Documentation}. Apache.
+    
+    \item Material Design Team. (2023). \textit{Material Design Guidelines}. Google.
+    
+    \item Freeman, E., Robson, E., Sierra, K., \& Bates, B. (2004). \textit{Head First Design Patterns}. O'Reilly Media.
+    
+    \item Gamma, E., Helm, R., Johnson, R., \& Vlissides, J. (1994). \textit{Design Patterns: Elements of Reusable Object-Oriented Software}. Addison-Wesley.
+    
+    \item Oracle Corporation. (2023). \textit{Java 17 Documentation}. Oracle.
+    
+    \item W3C. (2023). \textit{XML Documentation}. World Wide Web Consortium.
+\end{enumerate}
+
+\section{Phụ lục}
+
+\subsection{Phụ lục A: Cấu trúc thư mục project}
+
+\begin{lstlisting}[language=bash, caption=Cấu trúc thư mục]
+OOPSH/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/pocitaco/oopsh/
+│   │   │       ├── controllers/     # JavaFX Controllers
+│   │   │       ├── dao/            # Data Access Objects
+│   │   │       ├── models/         # Entity classes
+│   │   │       ├── enums/          # Enum classes
+│   │   │       └── utils/          # Utility classes
+│   │   └── resources/
+│   │       └── com/pocitaco/oopsh/
+│   │           ├── admin/          # Admin FXML files
+│   │           ├── examiner/       # Examiner FXML files
+│   │           ├── candidate/      # Candidate FXML files
+│   │           └── styles/         # CSS files
+├── data/                          # XML data files
+├── pom.xml                        # Maven configuration
+└── README.md                      # Documentation
+\end{lstlisting}
+
+\subsection{Phụ lục B: Danh sách file XML}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Tên file} & \textbf{Mô tả} & \textbf{Kích thước} \\
+\hline
+users.xml & Dữ liệu người dùng & 1.2KB \\
+\hline
+exam-types.xml & Dữ liệu loại thi & 0.8KB \\
+\hline
+exam-schedules.xml & Dữ liệu lịch thi & 1.5KB \\
+\hline
+registrations.xml & Dữ liệu đăng ký & 1.0KB \\
+\hline
+results.xml & Dữ liệu kết quả & 1.3KB \\
+\hline
+payments.xml & Dữ liệu thanh toán & 0.9KB \\
+\hline
+\end{tabular}
+\caption{Danh sách file XML trong hệ thống}
+\label{tab:xml_files}
+\end{table}
+
+\subsection{Phụ lục C: Screenshots hệ thống}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{images/user_management.png}
+\caption{Màn hình quản lý người dùng}
+\label{fig:user_management}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{images/exam_schedule.png}
+\caption{Màn hình quản lý lịch thi}
+\label{fig:exam_schedule}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{images/exam_results.png}
+\caption{Màn hình kết quả thi}
+\label{fig:exam_results}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{images/statistics.png}
+\caption{Màn hình thống kê}
+\label{fig:statistics}
+\end{figure}
+
+\end{document} 

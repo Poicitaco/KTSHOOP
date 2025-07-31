@@ -1,0 +1,88 @@
+package com.pocitaco.oopsh.controller    @Override
+    protected void setupEventHandlers() {
+        // No event handlers needed for this view
+    }
+    
+    @Override
+    protected void loadInitialData() {
+        if (currentUser != null) {
+            List<Result> gradedResults = resultDAO.getAll().stream()aminer;
+
+import com.pocitaco.oopsh.controllers.BaseController;
+import com.pocitaco.oopsh.dao.ResultDAO;
+import com.pocitaco.oopsh.models.Result;
+import com.pocitaco.oopsh.models.User;
+import com.pocitaco.oopsh.utils.SessionManager;
+import javafx.collections.FXCollections;
+import javafx.fxml.FXML;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.XYChart;
+import javafx.scene.control.Label;
+
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class PerformanceReportController extends BaseController {
+
+    @FXML
+    private BarChart<String, Number> performanceChart;
+
+    @FXML
+    private Label lblTotalGraded;
+
+    @FXML
+    private Label lblAverageScore;
+
+    private ResultDAO resultDAO;
+    private User currentUser;
+
+    @Override
+    public void initializeComponents() {
+        this.resultDAO = new ResultDAO();
+        this.currentUser = SessionManager.getCurrentUser();
+    }
+
+    @Override
+    protected void loadInitialData() {
+        if (currentUser != null) {
+            List<Result> gradedResults = resultDAO.getAll().stream()
+                    .filter(result -> result.getStatus().toString().equals("GRADED"))
+                    .collect(Collectors.toList());
+
+            lblTotalGraded.setText(String.valueOf(gradedResults.size()));
+
+            double averageTheory = gradedResults.stream().mapToInt(Result::getTheoryScore).average().orElse(0.0);
+            double averagePractice = gradedResults.stream().mapToInt(Result::getPracticeScore).average().orElse(0.0);
+            lblAverageScore.setText(String.format("Theory: %.2f, Practice: %.2f", averageTheory, averagePractice));
+
+            loadPerformanceChart(gradedResults);
+        }
+    }
+
+    private void loadPerformanceChart(List<Result> results) {
+        performanceChart.getData().clear();
+
+        Map<String, Long> monthlyGradedExams = results.stream()
+                .collect(Collectors.groupingBy(result -> new SimpleDateFormat("MMM yyyy").format(result.getExamDate()), Collectors.counting()));
+
+        XYChart.Series<String, Number> series = new XYChart.Series<>();
+        series.setName("Exams Graded");
+
+        monthlyGradedExams.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey())
+                .forEach(entry -> series.getData().add(new XYChart.Data<>(entry.getKey(), entry.getValue())));
+
+        performanceChart.getData().add(series);
+    }
+
+    @Override
+    protected void clearForm() {
+
+    }
+
+    @Override
+    protected void setFormEnabled(boolean b) {
+
+    }
+}

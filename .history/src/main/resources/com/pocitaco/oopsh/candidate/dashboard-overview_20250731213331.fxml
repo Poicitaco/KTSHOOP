@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.pocitaco.oopsh.controllers.candidate.DashboardOverviewController"
+      styleClass="main-content" spacing="20" padding="20">
+
+    <!-- Loading Container -->
+    <VBox fx:id="loadingContainer" styleClass="loading-container" alignment="CENTER" spacing="10" visible="false">
+        <ProgressIndicator fx:id="loadingIndicator" styleClass="loading-indicator"/>
+        <Label fx:id="loadingLabel" styleClass="loading-label" text="Đang tải..."/>
+    </VBox>
+
+    <!-- Welcome Section -->
+    <VBox styleClass="material-card" spacing="10">
+        <HBox alignment="CENTER_LEFT" spacing="20">
+            <VBox spacing="5">
+                <Label fx:id="lblWelcome" styleClass="page-title" text="Chào mừng, Thí sinh!"/>
+                <Label fx:id="lblDate" styleClass="breadcrumb" text="Hôm nay là..."/>
+            </VBox>
+        </HBox>
+    </VBox>
+
+    <!-- Statistics Grid -->
+    <GridPane hgap="20" vgap="20">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="200" prefWidth="250"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="200" prefWidth="250"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="200" prefWidth="250"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="200" prefWidth="250"/>
+        </columnConstraints>
+
+        <!-- Registered Exams -->
+        <VBox styleClass="material-card,stat-card" GridPane.columnIndex="0" spacing="10">
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Label styleClass="stat-icon" text="📝" style="-fx-font-size: 24px;"/>
+                <VBox spacing="2">
+                    <Label fx:id="lblRegisteredExams" styleClass="stat-value" text="3"/>
+                    <Label styleClass="stat-label" text="Kỳ thi đã đăng ký"/>
+                </VBox>
+            </HBox>
+        </VBox>
+
+        <!-- Completed Exams -->
+        <VBox styleClass="material-card,stat-card" GridPane.columnIndex="1" spacing="10">
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Label styleClass="stat-icon" text="✅" style="-fx-font-size: 24px;"/>
+                <VBox spacing="2">
+                    <Label fx:id="lblCompletedExams" styleClass="stat-value" text="1"/>
+                    <Label styleClass="stat-label" text="Kỳ thi đã hoàn thành"/>
+                </VBox>
+            </HBox>
+        </VBox>
+
+        <!-- Upcoming Exams -->
+        <VBox styleClass="material-card,stat-card" GridPane.columnIndex="2" spacing="10">
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Label styleClass="stat-icon" text="📅" style="-fx-font-size: 24px;"/>
+                <VBox spacing="2">
+                    <Label fx:id="lblUpcomingExams" styleClass="stat-value" text="2"/>
+                    <Label styleClass="stat-label" text="Kỳ thi sắp tới"/>
+                </VBox>
+            </HBox>
+        </VBox>
+
+        <!-- Study Progress -->
+        <VBox styleClass="material-card,stat-card" GridPane.columnIndex="3" spacing="10">
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Label styleClass="stat-icon" text="📈" style="-fx-font-size: 24px;"/>
+                <VBox spacing="2">
+                    <Label fx:id="lblStudyProgress" styleClass="stat-value" text="75%"/>
+                    <Label styleClass="stat-label" text="Tiến độ học tập"/>
+                </VBox>
+            </HBox>
+        </VBox>
+    </GridPane>
+
+    <!-- Quick Actions -->
+    <VBox styleClass="material-card" spacing="15">
+        <Label styleClass="page-title" text="Thao tác nhanh"/>
+        <GridPane hgap="15" vgap="15">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="150" prefWidth="200"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="150" prefWidth="200"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="150" prefWidth="200"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="150" prefWidth="200"/>
+            </columnConstraints>
+
+            <Button fx:id="btnRegisterExam" text="Đăng ký thi" 
+                    styleClass="btn-primary" onAction="#handleRegisterExam"
+                    GridPane.columnIndex="0" maxWidth="Infinity" prefHeight="50"/>
+
+            <Button fx:id="btnViewResults" text="Xem kết quả" 
+                    styleClass="btn-secondary" onAction="#handleViewResults"
+                    GridPane.columnIndex="1" maxWidth="Infinity" prefHeight="50"/>
+
+            <Button fx:id="btnStudyMaterials" text="Tài liệu học tập" 
+                    styleClass="btn-secondary" onAction="#handleStudyMaterials"
+                    GridPane.columnIndex="2" maxWidth="Infinity" prefHeight="50"/>
+
+            <Button fx:id="btnPracticeTests" text="Bài thi thử" 
+                    styleClass="btn-secondary" onAction="#handlePracticeTests"
+                    GridPane.columnIndex="3" maxWidth="Infinity" prefHeight="50"/>
+        </GridPane>
+    </VBox>
+
+    <!-- Recent Activities -->
+    <VBox styleClass="material-card" spacing="15">
+        <Label styleClass="page-title" text="Hoạt động gần đây"/>
+        <VBox fx:id="activitiesContainer" spacing="10">
+            <HBox alignment="CENTER_LEFT" spacing="10" styleClass="activity-item">
+                <Label styleClass="activity-icon" text="📝" style="-fx-font-size: 16px;"/>
+                <VBox spacing="2">
+                    <Label styleClass="activity-title" text="Hoàn thành bài thi lý thuyết"/>
+                    <Label styleClass="activity-time" text="1 ngày trước"/>
+                </VBox>
+            </HBox>
+            
+            <HBox alignment="CENTER_LEFT" spacing="10" styleClass="activity-item">
+                <Label styleClass="activity-icon" text="📚" style="-fx-font-size: 16px;"/>
+                <VBox spacing="2">
+                    <Label styleClass="activity-title" text="Học tài liệu mới"/>
+                    <Label styleClass="activity-time" text="2 ngày trước"/>
+                </VBox>
+            </HBox>
+            
+            <HBox alignment="CENTER_LEFT" spacing="10" styleClass="activity-item">
+                <Label styleClass="activity-icon" text="✅" style="-fx-font-size: 16px;"/>
+                <VBox spacing="2">
+                    <Label styleClass="activity-title" text="Đăng ký kỳ thi thực hành"/>
+                    <Label styleClass="activity-time" text="3 ngày trước"/>
+                </VBox>
+            </HBox>
+        </VBox>
+    </VBox>
+
+</VBox>

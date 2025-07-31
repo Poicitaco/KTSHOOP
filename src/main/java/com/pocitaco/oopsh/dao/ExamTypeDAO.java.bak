@@ -1,0 +1,146 @@
+package com.pocitaco.oopsh.dao;
+
+import com.pocitaco.oopsh.models.ExamType;
+import com.pocitaco.oopsh.enums.ExamStatus;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+public class ExamTypeDAO extends BaseDAO<ExamType, Integer> {
+
+    public ExamTypeDAO() {
+        super("data/exam_types.xml", "examTypes");
+    }
+
+    @Override
+    protected String getElementName() {
+        return "examType";
+    }
+
+    @Override
+    protected ExamType elementToEntity(Element element) {
+        ExamType examType = new ExamType();
+        examType.setId(Integer.parseInt(getElementText(element, "id")));
+        examType.setCode(getElementText(element, "code"));
+        examType.setName(getElementText(element, "name"));
+        examType.setDescription(getElementText(element, "description"));
+        examType.setFee(Double.parseDouble(getElementText(element, "fee")));
+        examType.setTheoryPassScore(Integer.parseInt(getElementText(element, "theoryPassScore")));
+        examType.setPracticePassScore(Integer.parseInt(getElementText(element, "practicePassScore")));
+        examType.setStatus(getElementText(element, "status"));
+        return examType;
+    }
+
+    @Override
+    protected Element entityToElement(Document doc, ExamType examType) {
+        Element element = doc.createElement("examType");
+        setElementText(doc, element, "id", String.valueOf(examType.getId()));
+        setElementText(doc, element, "code", examType.getCode());
+        setElementText(doc, element, "name", examType.getName());
+        setElementText(doc, element, "description", examType.getDescription());
+        setElementText(doc, element, "fee", String.valueOf(examType.getFee()));
+        setElementText(doc, element, "theoryPassScore", String.valueOf(examType.getTheoryPassScore()));
+        setElementText(doc, element, "practicePassScore", String.valueOf(examType.getPracticePassScore()));
+        setElementText(doc, element, "status", examType.getStatus());
+        return element;
+    }
+
+    @Override
+    protected Integer getEntityId(ExamType entity) {
+        return entity.getId();
+    }
+
+    @Override
+    public ExamType create(ExamType entity) {
+        lock.writeLock().lock();
+        try {
+            Document doc = loadDocument();
+            Element root = doc.getDocumentElement();
+            entity.setId(generateNextId());
+            root.appendChild(entityToElement(doc, entity));
+            saveDocument(doc);
+            return entity;
+        } finally {
+            lock.writeLock().unlock();
+        }
+    }
+
+    @Override
+    public Optional<ExamType> get(Integer id) {
+        lock.readLock().lock();
+        try {
+            Document doc = loadDocument();
+            NodeList nodes = doc.getElementsByTagName(getElementName());
+            for (int i = 0; i < nodes.getLength(); i++) {
+                Element element = (Element) nodes.item(i);
+                if (Integer.parseInt(getElementText(element, "id")) == id) {
+                    return Optional.of(elementToEntity(element));
+                }
+            }
+            return Optional.empty();
+        } finally {
+            lock.readLock().unlock();
+        }
+    }
+
+    @Override
+    public ExamType update(ExamType entity) {
+        lock.writeLock().lock();
+        try {
+            Document doc = loadDocument();
+            Element root = doc.getDocumentElement();
+            NodeList nodes = root.getElementsByTagName(getElementName());
+            for (int i = 0; i < nodes.getLength(); i++) {
+                Element element = (Element) nodes.item(i);
+                if (Integer.parseInt(getElementText(element, "id")) == entity.getId()) {
+                    root.replaceChild(entityToElement(doc, entity), element);
+                    saveDocument(doc);
+                    return entity;
+                }
+            }
+            return null; // Or throw an exception if not found
+        } finally {
+            lock.writeLock().unlock();
+        }
+    }
+
+    @Override
+    public void delete(Integer id) {
+        lock.writeLock().lock();
+        try {
+            Document doc = loadDocument();
+            Element root = doc.getDocumentElement();
+            NodeList nodes = root.getElementsByTagName(getElementName());
+            for (int i = 0; i < nodes.getLength(); i++) {
+                Element element = (Element) nodes.item(i);
+                if (Integer.parseInt(getElementText(element, "id")) == id) {
+                    root.removeChild(element);
+                    saveDocument(doc);
+                    return;
+                }
+            }
+        } finally {
+            lock.writeLock().unlock();
+        }
+    }
+
+    @Override
+    public List<ExamType> getAll() {
+        lock.readLock().lock();
+        try {
+            List<ExamType> examTypes = new ArrayList<>();
+            Document doc = loadDocument();
+            NodeList nodes = doc.getElementsByTagName(getElementName());
+            for (int i = 0; i < nodes.getLength(); i++) {
+                examTypes.add(elementToEntity((Element) nodes.item(i)));
+            }
+            return examTypes;
+        } finally {
+            lock.readLock().unlock();
+        }
+    }
+}

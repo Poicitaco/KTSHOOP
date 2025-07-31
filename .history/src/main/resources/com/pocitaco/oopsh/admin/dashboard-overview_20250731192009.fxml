@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.pocitaco.oopsh.controllers.admin.AdminDashboardOverviewController"
+      spacing="20" styleClass="main-content" style="-fx-padding: 20;">
+   
+   <!-- Welcome Section -->
+   <VBox styleClass="material-card" style="-fx-padding: 30;">
+      <HBox alignment="CENTER_LEFT" spacing="15">
+         <VBox alignment="CENTER" style="-fx-background-color: #1976D2; -fx-background-radius: 50; -fx-padding: 15;">
+            <FontIcon iconLiteral="mdi2a-account-tie" iconSize="32" style="-fx-text-fill: white;" />
+         </VBox>
+         <VBox spacing="5">
+            <Label fx:id="lblWelcome" text="Chào mừng, Admin!" styleClass="page-title" />
+            <Label fx:id="lblDate" text="Hôm nay là ngày 31/07/2025" style="-fx-text-fill: #757575; -fx-font-size: 14px;" />
+         </VBox>
+      </HBox>
+   </VBox>
+   
+   <!-- Statistics Cards -->
+   <GridPane hgap="20" vgap="20">
+      <columnConstraints>
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="250" prefWidth="300" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="250" prefWidth="300" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="250" prefWidth="300" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="250" prefWidth="300" />
+      </columnConstraints>
+      
+      <!-- Total Users Card -->
+      <VBox styleClass="stat-card" GridPane.columnIndex="0" GridPane.rowIndex="0">
+         <HBox alignment="CENTER_LEFT" spacing="15">
+            <VBox alignment="CENTER" style="-fx-background-color: #4CAF50; -fx-background-radius: 12; -fx-padding: 12;">
+               <FontIcon iconLiteral="mdi2a-account-group" iconSize="24" style="-fx-text-fill: white;" />
+            </VBox>
+            <VBox spacing="5">
+               <Label fx:id="lblTotalUsers" text="1,234" styleClass="stat-value" />
+               <Label text="Tổng người dùng" styleClass="stat-label" />
+            </VBox>
+         </HBox>
+      </VBox>
+      
+      <!-- Total Exams Card -->
+      <VBox styleClass="stat-card" GridPane.columnIndex="1" GridPane.rowIndex="0">
+         <HBox alignment="CENTER_LEFT" spacing="15">
+            <VBox alignment="CENTER" style="-fx-background-color: #2196F3; -fx-background-radius: 12; -fx-padding: 12;">
+               <FontIcon iconLiteral="mdi2f-file-document-multiple" iconSize="24" style="-fx-text-fill: white;" />
+            </VBox>
+            <VBox spacing="5">
+               <Label fx:id="lblTotalExams" text="567" styleClass="stat-value" />
+               <Label text="Tổng kỳ thi" styleClass="stat-label" />
+            </VBox>
+         </HBox>
+      </VBox>
+      
+      <!-- Active Exams Card -->
+      <VBox styleClass="stat-card" GridPane.columnIndex="2" GridPane.rowIndex="0">
+         <HBox alignment="CENTER_LEFT" spacing="15">
+            <VBox alignment="CENTER" style="-fx-background-color: #FF9800; -fx-background-radius: 12; -fx-padding: 12;">
+               <FontIcon iconLiteral="mdi2c-calendar-clock" iconSize="24" style="-fx-text-fill: white;" />
+            </VBox>
+            <VBox spacing="5">
+               <Label fx:id="lblActiveExams" text="23" styleClass="stat-value" />
+               <Label text="Kỳ thi đang diễn ra" styleClass="stat-label" />
+            </VBox>
+         </HBox>
+      </VBox>
+      
+      <!-- Revenue Card -->
+      <VBox styleClass="stat-card" GridPane.columnIndex="3" GridPane.rowIndex="0">
+         <HBox alignment="CENTER_LEFT" spacing="15">
+            <VBox alignment="CENTER" style="-fx-background-color: #9C27B0; -fx-background-radius: 12; -fx-padding: 12;">
+               <FontIcon iconLiteral="mdi2c-currency-usd" iconSize="24" style="-fx-text-fill: white;" />
+            </VBox>
+            <VBox spacing="5">
+               <Label fx:id="lblTotalRevenue" text="2.5M VNĐ" styleClass="stat-value" />
+               <Label text="Doanh thu tháng" styleClass="stat-label" />
+            </VBox>
+         </HBox>
+      </VBox>
+   </GridPane>
+   
+   <!-- Recent Activities and Quick Actions -->
+   <HBox spacing="20" VBox.vgrow="ALWAYS">
+      <!-- Recent Activities -->
+      <VBox styleClass="material-card" HBox.hgrow="ALWAYS" style="-fx-padding: 20;">
+         <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 0 0 15 0;">
+            <FontIcon iconLiteral="mdi2c-clock-outline" iconSize="20" style="-fx-text-fill: #1976D2;" />
+            <Label text="Hoạt động gần đây" style="-fx-font-size: 18px; -fx-font-weight: 600; -fx-text-fill: #212121;" />
+         </HBox>
+         
+         <VBox fx:id="activitiesContainer" spacing="10">
+            <!-- Activity items will be added dynamically -->
+            <VBox style="-fx-background-color: #F5F5F5; -fx-background-radius: 8; -fx-padding: 12;">
+               <HBox alignment="CENTER_LEFT" spacing="10">
+                  <VBox alignment="CENTER" style="-fx-background-color: #4CAF50; -fx-background-radius: 6; -fx-padding: 6;">
+                     <FontIcon iconLiteral="mdi2a-account-plus" iconSize="16" style="-fx-text-fill: white;" />
+                  </VBox>
+                  <VBox spacing="2">
+                     <Label text="Người dùng mới đăng ký" style="-fx-font-weight: 500; -fx-text-fill: #212121;" />
+                     <Label text="2 phút trước" style="-fx-font-size: 12px; -fx-text-fill: #757575;" />
+                  </VBox>
+               </HBox>
+            </VBox>
+            
+            <VBox style="-fx-background-color: #F5F5F5; -fx-background-radius: 8; -fx-padding: 12;">
+               <HBox alignment="CENTER_LEFT" spacing="10">
+                  <VBox alignment="CENTER" style="-fx-background-color: #2196F3; -fx-background-radius: 6; -fx-padding: 6;">
+                     <FontIcon iconLiteral="mdi2f-file-document-plus" iconSize="16" style="-fx-text-fill: white;" />
+                  </VBox>
+                  <VBox spacing="2">
+                     <Label text="Kỳ thi mới được tạo" style="-fx-font-weight: 500; -fx-text-fill: #212121;" />
+                     <Label text="15 phút trước" style="-fx-font-size: 12px; -fx-text-fill: #757575;" />
+                  </VBox>
+               </HBox>
+            </VBox>
+            
+            <VBox style="-fx-background-color: #F5F5F5; -fx-background-radius: 8; -fx-padding: 12;">
+               <HBox alignment="CENTER_LEFT" spacing="10">
+                  <VBox alignment="CENTER" style="-fx-background-color: #FF9800; -fx-background-radius: 6; -fx-padding: 6;">
+                     <FontIcon iconLiteral="mdi2c-chart-bar" iconSize="16" style="-fx-text-fill: white;" />
+                  </VBox>
+                  <VBox spacing="2">
+                     <Label text="Báo cáo được xuất" style="-fx-font-weight: 500; -fx-text-fill: #212121;" />
+                     <Label text="1 giờ trước" style="-fx-font-size: 12px; -fx-text-fill: #757575;" />
+                  </VBox>
+               </HBox>
+            </VBox>
+         </VBox>
+      </VBox>
+      
+      <!-- Quick Actions -->
+      <VBox styleClass="material-card" prefWidth="300" style="-fx-padding: 20;">
+         <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 0 0 15 0;">
+            <FontIcon iconLiteral="mdi2c-lightning-bolt" iconSize="20" style="-fx-text-fill: #1976D2;" />
+            <Label text="Thao tác nhanh" style="-fx-font-size: 18px; -fx-font-weight: 600; -fx-text-fill: #212121;" />
+         </HBox>
+         
+         <VBox spacing="10">
+            <Button fx:id="btnCreateUser" text="Tạo người dùng mới" styleClass="btn-primary" 
+                    onAction="#handleCreateUser" maxWidth="Infinity" />
+            
+            <Button fx:id="btnCreateExam" text="Tạo kỳ thi mới" styleClass="btn-primary" 
+                    onAction="#handleCreateExam" maxWidth="Infinity" />
+            
+            <Button fx:id="btnViewReports" text="Xem báo cáo" styleClass="btn-secondary" 
+                    onAction="#handleViewReports" maxWidth="Infinity" />
+            
+            <Button fx:id="btnSystemSettings" text="Cài đặt hệ thống" styleClass="btn-secondary" 
+                    onAction="#handleSystemSettings" maxWidth="Infinity" />
+         </VBox>
+      </VBox>
+   </HBox>
+   
+   <!-- Loading Container -->
+   <VBox fx:id="loadingContainer" visible="false" alignment="CENTER" spacing="10" 
+         style="-fx-background-color: rgba(255,255,255,0.9); -fx-background-radius: 12; -fx-padding: 40;">
+      <ProgressIndicator fx:id="loadingIndicator" />
+      <Label fx:id="loadingLabel" text="Đang tải dữ liệu..." style="-fx-text-fill: #757575;" />
+   </VBox>
+</VBox>

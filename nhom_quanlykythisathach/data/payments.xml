@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<payments>
+    <payment>
+        <id>1</id>
+        <registrationId>1</registrationId>
+        <amount>500000</amount>
+        <paymentDate>2025-08-01</paymentDate>
+        <paymentMethod>CASH</paymentMethod>
+        <status>COMPLETED</status>
+        <notes>Thanh toán tiền mặt</notes>
+    </payment>
+    <payment>
+        <id>2</id>
+        <registrationId>2</registrationId>
+        <amount>800000</amount>
+        <paymentDate>2025-08-02</paymentDate>
+        <paymentMethod>BANK_TRANSFER</paymentMethod>
+        <status>PENDING</status>
+        <notes>Chuyển khoản ngân hàng</notes>
+    </payment>
+</payments> 

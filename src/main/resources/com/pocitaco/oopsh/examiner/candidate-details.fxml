@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pocitaco.oopsh.controllers.examiner.CandidateDetailsController" styleClass="content-area" spacing="20">
+    <children>
+        <Label styleClass="page-title" text="Candidate Details" />
+        <GridPane hgap="20" vgap="15">
+            <Label text="Full Name:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+            <Label fx:id="lblFullName" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+            <Label text="Email:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+            <Label fx:id="lblEmail" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+            <Label text="CCCD:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+            <Label fx:id="lblCccd" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+            <Label text="Birthday:" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+            <Label fx:id="lblBirthday" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+
+            <Label text="Phone:" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+            <Label fx:id="lblPhone" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+
+            <Label text="Address:" GridPane.rowIndex="5" GridPane.columnIndex="0" />
+            <Label fx:id="lblAddress" GridPane.rowIndex="5" GridPane.columnIndex="1" />
+        </GridPane>
+    </children>
+</VBox>

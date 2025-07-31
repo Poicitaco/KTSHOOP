@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sessionReports>
+    <sessionReport>
+        <id>1</id>
+        <sessionId>1</sessionId>
+        <examinerId>2</examinerId>
+        <totalCandidates>25</totalCandidates>
+        <passedCandidates>20</passedCandidates>
+        <failedCandidates>5</failedCandidates>
+        <averageScore>82.5</averageScore>
+        <notes>Phiên thi diễn ra tốt, tỷ lệ đậu cao</notes>
+        <createdDate>2025-08-15 16:30:00</createdDate>
+    </sessionReport>
+</sessionReports> 

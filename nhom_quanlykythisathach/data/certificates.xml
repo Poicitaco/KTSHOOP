@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<certificates>
+    <certificate>
+        <id>1</id>
+        <candidateId>3</candidateId>
+        <examTypeId>1</examTypeId>
+        <certificateNumber>GPLX-A1-2025-001</certificateNumber>
+        <grade>EXCELLENT</grade>
+        <issuedDate>2025-08-16</issuedDate>
+        <expiryDate>2030-08-16</expiryDate>
+        <status>ACTIVE</status>
+    </certificate>
+</certificates> 

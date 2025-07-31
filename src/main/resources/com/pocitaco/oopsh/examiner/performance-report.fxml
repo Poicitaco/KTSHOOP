@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pocitaco.oopsh.controllers.examiner.PerformanceReportController" styleClass="content-area" spacing="20">
+    <children>
+        <Label styleClass="page-title" text="My Performance Report" />
+        <BarChart fx:id="performanceChart">
+            <xAxis>
+                <CategoryAxis label="Month" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Exams Graded" />
+            </yAxis>
+        </BarChart>
+        <VBox spacing="10">
+            <Label text="Total Exams Graded:" />
+            <Label fx:id="lblTotalGraded" />
+            <Label text="Average Score:" />
+            <Label fx:id="lblAverageScore" />
+        </VBox>
+    </children>
+</VBox>

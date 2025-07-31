@@ -1,0 +1,173 @@
+/* Material Design CSS Styles */
+
+/* Root styles */
+.root {
+    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+/* Buttons */
+.material-button {
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-padding: 12 20;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 4, 0, 0, 2);
+}
+
+.material-button:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 6, 0, 0, 3);
+}
+
+.material-button:pressed {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 2, 0, 0, 1);
+}
+
+.primary-button {
+    -fx-background-color: #1976D2;
+    -fx-text-fill: white;
+}
+
+.primary-button:hover {
+    -fx-background-color: #1565C0;
+}
+
+.secondary-button {
+    -fx-background-color: #F5F5F5;
+    -fx-text-fill: #424242;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #EEEEEE;
+}
+
+.danger-button {
+    -fx-background-color: #D32F2F;
+    -fx-text-fill: white;
+}
+
+.danger-button:hover {
+    -fx-background-color: #C62828;
+}
+
+/* Text Fields */
+.material-text-field {
+    -fx-background-color: #F5F5F5;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 12;
+    -fx-font-size: 14px;
+}
+
+.material-text-field:focused {
+    -fx-border-color: #1976D2;
+    -fx-border-width: 2;
+}
+
+/* Cards */
+.material-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 25;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 8, 0, 0, 2);
+}
+
+.material-card:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 12, 0, 0, 4);
+}
+
+/* Sidebar */
+.sidebar {
+    -fx-background-color: #1976D2;
+}
+
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-padding: 15;
+    -fx-background-radius: 8;
+    -fx-font-size: 14px;
+    -fx-alignment: BASELINE_LEFT;
+    -fx-cursor: hand;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: rgba(255,255,255,0.1);
+}
+
+.sidebar-button-active {
+    -fx-background-color: #1565C0;
+    -fx-text-fill: white;
+    -fx-padding: 15;
+    -fx-background-radius: 8;
+    -fx-font-size: 14px;
+    -fx-alignment: BASELINE_LEFT;
+}
+
+/* Tables */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.table-view .column-header {
+    -fx-background-color: #F5F5F5;
+    -fx-border-color: #E0E0E0;
+    -fx-font-weight: bold;
+    -fx-text-fill: #424242;
+}
+
+.table-view .table-row-cell {
+    -fx-border-color: transparent transparent #F0F0F0 transparent;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #E3F2FD;
+}
+
+/* Labels */
+.title-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1976D2;
+}
+
+.subtitle-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #424242;
+}
+
+.body-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666666;
+}
+
+/* Statistics Cards */
+.stat-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 25;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 8, 0, 0, 2);
+    -fx-alignment: center;
+}
+
+.stat-icon {
+    -fx-font-size: 32px;
+}
+
+.stat-number {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.stat-description {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666666;
+}

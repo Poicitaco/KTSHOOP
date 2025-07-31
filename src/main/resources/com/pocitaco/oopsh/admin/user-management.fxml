@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTableView?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pocitaco.oopsh.controllers.admin.UserManagementController" styleClass="content-area" spacing="20">
+    <children>
+        <Label styleClass="page-title" text="User Management" />
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <children>
+                <MFXTextField fx:id="txtSearch" promptText="Search users..." HBox.hgrow="ALWAYS" />
+                <MFXButton fx:id="btnSearch" text="Search">
+                    <graphic>
+                        <FontIcon iconLiteral="mdi2s-magnify" />
+                    </graphic>
+                </MFXButton>
+                <MFXButton fx:id="btnAddUser" styleClass="btn-primary" text="Add User">
+                    <graphic>
+                        <FontIcon iconLiteral="mdi2p-plus" />
+                    </graphic>
+                </MFXButton>
+            </children>
+        </HBox>
+        <MFXTableView fx:id="tblUsers" VBox.vgrow="ALWAYS" />
+    </children>
+</VBox>

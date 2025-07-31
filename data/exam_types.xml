@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<examTypes>
+    <examType>
+        <id>1</id>
+        <name>A1</name>
+        <description>Xe mô tô hai bánh có dung tích xi-lanh từ 50cc đến dưới 175cc</description>
+        <fee>500000</fee>
+        <duration>30</duration>
+        <passingScore>80</passingScore>
+        <status>ACTIVE</status>
+    </examType>
+    <examType>
+        <id>2</id>
+        <name>A2</name>
+        <description>Xe mô tô hai bánh có dung tích xi-lanh từ 175cc trở lên</description>
+        <fee>600000</fee>
+        <duration>30</duration>
+        <passingScore>80</passingScore>
+        <status>ACTIVE</status>
+    </examType>
+    <examType>
+        <id>3</id>
+        <name>B1</name>
+        <description>Ô tô chở người đến 9 chỗ ngồi, ô tô tải có trọng tải dưới 3.500kg</description>
+        <fee>800000</fee>
+        <duration>45</duration>
+        <passingScore>85</passingScore>
+        <status>ACTIVE</status>
+    </examType>
+    <examType>
+        <id>4</id>
+        <name>B2</name>
+        <description>Ô tô chở người đến 9 chỗ ngồi, ô tô tải có trọng tải dưới 3.500kg</description>
+        <fee>1000000</fee>
+        <duration>45</duration>
+        <passingScore>85</passingScore>
+        <status>ACTIVE</status>
+    </examType>
+    <examType>
+        <id>5</id>
+        <name>C</name>
+        <description>Ô tô tải có trọng tải từ 3.500kg trở lên</description>
+        <fee>1200000</fee>
+        <duration>60</duration>
+        <passingScore>85</passingScore>
+        <status>ACTIVE</status>
+    </examType>
+    <examType>
+        <id>6</id>
+        <name>D</name>
+        <description>Ô tô chở người từ 10 đến 30 chỗ ngồi</description>
+        <fee>1500000</fee>
+        <duration>60</duration>
+        <passingScore>85</passingScore>
+        <status>ACTIVE</status>
+    </examType>
+    <examType>
+        <id>7</id>
+        <name>E</name>
+        <description>Ô tô chở người trên 30 chỗ ngồi</description>
+        <fee>2000000</fee>
+        <duration>60</duration>
+        <passingScore>85</passingScore>
+        <status>ACTIVE</status>
+    </examType>
+    <examType>
+        <id>8</id>
+        <name>F</name>
+        <description>Máy kéo, xe máy chuyên dùng</description>
+        <fee>800000</fee>
+        <duration>45</duration>
+        <passingScore>80</passingScore>
+        <status>ACTIVE</status>
+    </examType>
+</examTypes> 

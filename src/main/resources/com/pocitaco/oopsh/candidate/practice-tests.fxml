@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXListView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pocitaco.oopsh.controllers.candidate.PracticeTestsController" styleClass="content-area" spacing="20">
+    <children>
+        <Label styleClass="page-title" text="Practice Tests" />
+        <MFXListView fx:id="lstPracticeTests" VBox.vgrow="ALWAYS" />
+        <HBox alignment="CENTER_RIGHT">
+            <children>
+                <MFXButton fx:id="btnStartTest" styleClass="btn-primary" text="Start Test" />
+            </children>
+        </HBox>
+    </children>
+</VBox>

@@ -1,0 +1,13 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build and Run JavaFX App",
+      "type": "shell",
+      "command": "mvn clean javafx:run",
+      "group": "build",
+      "isBackground": false,
+      "problemMatcher": ["$javac"]
+    }
+  ]
+}

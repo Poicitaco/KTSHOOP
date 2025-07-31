@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<examSchedules>
+    <examSchedule>
+        <id>1</id>
+        <examTypeId>1</examTypeId>
+        <examDate>2025-08-15</examDate>
+        <timeSlot>MORNING</timeSlot>
+        <location>Trung tâm sát hạch Hà Nội</location>
+        <maxCandidates>50</maxCandidates>
+        <registeredCandidates>25</registeredCandidates>
+        <status>OPEN</status>
+        <examinerId>2</examinerId>
+        <createdDate>2025-07-31</createdDate>
+    </examSchedule>
+    <examSchedule>
+        <id>2</id>
+        <examTypeId>3</examTypeId>
+        <examDate>2025-08-20</examDate>
+        <timeSlot>AFTERNOON</timeSlot>
+        <location>Trung tâm sát hạch TP.HCM</location>
+        <maxCandidates>30</maxCandidates>
+        <registeredCandidates>18</registeredCandidates>
+        <status>OPEN</status>
+        <examinerId>2</examinerId>
+        <createdDate>2025-07-31</createdDate>
+    </examSchedule>
+    <examSchedule>
+        <id>3</id>
+        <examTypeId>4</examTypeId>
+        <examDate>2025-08-25</examDate>
+        <timeSlot>MORNING</timeSlot>
+        <location>Trung tâm sát hạch Đà Nẵng</location>
+        <maxCandidates>40</maxCandidates>
+        <registeredCandidates>35</registeredCandidates>
+        <status>SCHEDULED</status>
+        <examinerId>2</examinerId>
+        <createdDate>2025-07-31</createdDate>
+    </examSchedule>
+</examSchedules> 

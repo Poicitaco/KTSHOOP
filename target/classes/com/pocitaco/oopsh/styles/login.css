@@ -1,0 +1,192 @@
+ /* Material Design Login Styles */
+
+/* Root styling */
+.root {
+    -fx-font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+    -fx-background-color: #1976D2;
+}
+
+/* Material Input Field Styles */
+.material-input {
+    -fx-background-color: #F8F9FA;
+    -fx-background-radius: 12;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+    -fx-font-size: 16px;
+    -fx-text-fill: #212121;
+    -fx-padding: 12 16;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 4, 0, 0, 1);
+    -fx-transition: all 0.3s ease;
+}
+
+.material-input:hover {
+    -fx-border-color: #1976D2;
+    -fx-effect: dropshadow(gaussian, rgba(25,118,210,0.1), 8, 0, 0, 2);
+}
+
+.material-input:focused {
+    -fx-border-color: #1976D2;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(25,118,210,0.2), 10, 0, 0, 3);
+    -fx-background-color: white;
+}
+
+/* Material Button Styles */
+.material-button {
+    -fx-background-color: #1976D2;
+    -fx-background-radius: 12;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 14 24;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(25,118,210,0.3), 8, 0, 0, 2);
+    -fx-transition: all 0.3s ease;
+}
+
+.material-button:hover {
+    -fx-background-color: #1565C0;
+    -fx-effect: dropshadow(gaussian, rgba(25,118,210,0.4), 12, 0, 0, 4);
+    -fx-translate-y: -1;
+}
+
+.material-button:pressed {
+    -fx-background-color: #0D47A1;
+    -fx-effect: dropshadow(gaussian, rgba(25,118,210,0.2), 4, 0, 0, 1);
+    -fx-translate-y: 1;
+}
+
+/* Card Styles */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 16;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 24, 0, 0, 8);
+    -fx-padding: 48 40 40 40;
+}
+
+/* Text Styles */
+.title-text {
+    -fx-font-size: 28px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #212121;
+}
+
+.subtitle-text {
+    -fx-font-size: 16px;
+    -fx-text-fill: #757575;
+}
+
+.label-text {
+    -fx-font-size: 16px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #424242;
+}
+
+/* Animations */
+@keyframes ripple {
+    to {
+        -fx-scale-x: 2;
+        -fx-scale-y: 2;
+        -fx-opacity: 0;
+    }
+}
+
+.ripple {
+    -fx-background-color: rgba(255,255,255,0.7);
+    -fx-background-radius: 100%;
+    -fx-scale-x: 0;
+    -fx-scale-y: 0;
+    -fx-opacity: 1;
+    -fx-animation: ripple 0.6s linear;
+}
+
+/* Footer Styles */
+.footer-text {
+    -fx-font-size: 12px;
+    -fx-text-fill: rgba(255,255,255,0.7);
+}
+
+.footer-subtext {
+    -fx-font-size: 11px;
+    -fx-text-fill: rgba(255,255,255,0.5);
+}
+
+/* Gradient Background Animation */
+.gradient-panel {
+    -fx-background-color: linear-gradient(135deg, #2C3E50 0%, #34495E 50%, #2C3E50 100%);
+}
+
+/* Logo Animation */
+.logo-circle {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 15, 0, 0, 5);
+}
+
+.logo-circle:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 20, 0, 0, 8);
+}
+
+/* Form Panel Styling */
+.form-panel {
+    -fx-background-color: #F8F9FA;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 0);
+}
+
+/* Separator Line */
+.separator .line {
+    -fx-background-color: #3498DB;
+    -fx-pref-height: 2;
+}
+
+/* Loading Animation Classes */
+.loading-button {
+    -fx-background-color: #95A5A6;
+}
+
+.success-button {
+    -fx-background-color: linear-gradient(to right, #27AE60, #229954);
+}
+
+.error-button {
+    -fx-background-color: linear-gradient(to right, #E74C3C, #C0392B);
+}
+
+/* Elevation Effects */
+.elevation-1 {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 4, 0, 0, 1);
+}
+
+.elevation-2 {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.16), 8, 0, 0, 2);
+}
+
+.elevation-3 {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.19), 12, 0, 0, 4);
+}
+
+.elevation-4 {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 16, 0, 0, 8);
+}
+
+/* Smooth Transitions */
+.smooth-transition {
+    -fx-transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+/* Premium Color Palette */
+.primary-color { -fx-background-color: #3498DB; }
+.primary-dark { -fx-background-color: #2980B9; }
+.secondary-color { -fx-background-color: #27AE60; }
+.accent-color { -fx-background-color: #E67E22; }
+.background-light { -fx-background-color: #F8F9FA; }
+.background-dark { -fx-background-color: #2C3E50; }
+.text-primary { -fx-text-fill: #2C3E50; }
+.text-secondary { -fx-text-fill: #7F8C8D; }
+.text-muted { -fx-text-fill: #95A5A6; }
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .split-panel {
+        -fx-orientation: vertical;
+    }
+}

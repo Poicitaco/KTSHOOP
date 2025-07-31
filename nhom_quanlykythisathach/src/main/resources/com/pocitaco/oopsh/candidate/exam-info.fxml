@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pocitaco.oopsh.controllers.candidate.ExamInfoController" styleClass="content-area" spacing="20">
+    <children>
+        <Label styleClass="page-title" text="Exam Information" />
+        <GridPane hgap="20" vgap="15">
+            <padding>
+                <Insets top="20" />
+            </padding>
+
+            <Label text="Code:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+            <Label fx:id="lblCode" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+            <Label text="Name:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+            <Label fx:id="lblName" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+            <Label text="Description:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+            <Label fx:id="lblDescription" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+            <Label text="Fee:" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+            <Label fx:id="lblFee" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+
+            <Label text="Theory Pass Score:" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+            <Label fx:id="lblTheoryPassScore" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+
+            <Label text="Practice Pass Score:" GridPane.rowIndex="5" GridPane.columnIndex="0" />
+            <Label fx:id="lblPracticePassScore" GridPane.rowIndex="5" GridPane.columnIndex="1" />
+
+        </GridPane>
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <children>
+                <MFXButton fx:id="btnRegister" styleClass="btn-primary" text="Register for this Exam" />
+            </children>
+        </HBox>
+    </children>
+</VBox>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<users>
+    <user>
+        <id>1</id>
+        <username>admin</username>
+        <password>admin123</password>
+        <role>ADMIN</role>
+        <fullName>Quản trị viên</fullName>
+        <email>admin@satheach.com</email>
+        <createdDate>2025-07-31</createdDate>
+        <status>ACTIVE</status>
+    </user>
+    <user>
+        <id>2</id>
+        <username>giamthi001</username>
+        <password>gt123456</password>
+        <role>EXAMINER</role>
+        <fullName>Nguyễn Văn A</fullName>
+        <email>giamthi001@satheach.com</email>
+        <createdDate>2025-07-31</createdDate>
+        <status>ACTIVE</status>
+        <employeeId>GT001</employeeId>
+        <experience>5</experience>
+    </user>
+    <user>
+        <id>3</id>
+        <username>thisinh001</username>
+        <password>ts123456</password>
+        <role>CANDIDATE</role>
+        <fullName>Trần Thị B</fullName>
+        <email>thisinh001@email.com</email>
+        <createdDate>2025-07-31</createdDate>
+        <status>ACTIVE</status>
+        <cccd>123456789012</cccd>
+        <birthday>1995-01-15</birthday>
+        <phone>0901234567</phone>
+        <address>Hà Nội</address>
+    </user>
+</users>

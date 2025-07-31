@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pocitaco.oopsh.controllers.admin.DashboardStatsController" styleClass="content-area" spacing="20">
+    <children>
+        <Label styleClass="page-title" text="Dashboard Statistics" />
+        <HBox spacing="20" VBox.vgrow="ALWAYS">
+            <children>
+                <VBox HBox.hgrow="ALWAYS" spacing="10">
+                    <children>
+                        <Label styleClass="card-title" text="User Registrations Over Time" />
+                        <AreaChart fx:id="userRegistrationsChart">
+                            <xAxis>
+                                <CategoryAxis label="Month" />
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis label="Number of Users" />
+                            </yAxis>
+                        </AreaChart>
+                    </children>
+                </VBox>
+                <VBox spacing="10">
+                     <children>
+                        <Label styleClass="card-title" text="Exam Registrations by Type" />
+                        <PieChart fx:id="examRegistrationsChart" />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</VBox>

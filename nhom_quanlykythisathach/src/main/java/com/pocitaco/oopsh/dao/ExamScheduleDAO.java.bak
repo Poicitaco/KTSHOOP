@@ -1,0 +1,152 @@
+package com.pocitaco.oopsh.dao;
+
+import com.pocitaco.oopsh.models.ExamSchedule;
+import com.pocitaco.oopsh.enums.ScheduleStatus;
+import com.pocitaco.oopsh.enums.TimeSlot;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Optional;
+
+public class ExamScheduleDAO extends BaseDAO<ExamSchedule, Integer> {
+
+    private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
+
+    public ExamScheduleDAO() {
+        super("data/exam_schedules.xml", "examSchedules");
+    }
+
+    @Override
+    protected String getElementName() {
+        return "examSchedule";
+    }
+
+    @Override
+    protected ExamSchedule elementToEntity(Element element) {
+        ExamSchedule examSchedule = new ExamSchedule();
+        examSchedule.setId(Integer.parseInt(getElementText(element, "id")));
+        examSchedule.setExamTypeId(Integer.parseInt(getElementText(element, "examTypeId")));
+        examSchedule.setExaminerId(Integer.parseInt(getElementText(element, "examinerId")));
+        try {
+            examSchedule.setExamDate(DATE_FORMAT.parse(getElementText(element, "examDate")));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        examSchedule.setTimeSlot(TimeSlot.valueOf(getElementText(element, "timeSlot")));
+        examSchedule.setStatus(ScheduleStatus.valueOf(getElementText(element, "status")));
+        return examSchedule;
+    }
+
+    @Override
+    protected Element entityToElement(Document doc, ExamSchedule examSchedule) {
+        Element element = doc.createElement("examSchedule");
+        setElementText(doc, element, "id", String.valueOf(examSchedule.getId()));
+        setElementText(doc, element, "examTypeId", String.valueOf(examSchedule.getExamTypeId()));
+        setElementText(doc, element, "examinerId", String.valueOf(examSchedule.getExaminerId()));
+        setElementText(doc, element, "examDate", DATE_FORMAT.format(examSchedule.getExamDate()));
+        setElementText(doc, element, "timeSlot", examSchedule.getTimeSlot().name());
+        setElementText(doc, element, "status", examSchedule.getStatus().name());
+        return element;
+    }
+
+    @Override
+    protected Integer getEntityId(ExamSchedule entity) {
+        return entity.getId();
+    }
+
+    @Override
+    public ExamSchedule create(ExamSchedule entity) {
+        lock.writeLock().lock();
+        try {
+            Document doc = loadDocument();
+            Element root = doc.getDocumentElement();
+            entity.setId(generateNextId());
+            root.appendChild(entityToElement(doc, entity));
+            saveDocument(doc);
+            return entity;
+        } finally {
+            lock.writeLock().unlock();
+        }
+    }
+
+    @Override
+    public Optional<ExamSchedule> get(Integer id) {
+        lock.readLock().lock();
+        try {
+            Document doc = loadDocument();
+            NodeList nodes = doc.getElementsByTagName(getElementName());
+            for (int i = 0; i < nodes.getLength(); i++) {
+                Element element = (Element) nodes.item(i);
+                if (Integer.parseInt(getElementText(element, "id")) == id) {
+                    return Optional.of(elementToEntity(element));
+                }
+            }
+            return Optional.empty();
+        } finally {
+            lock.readLock().unlock();
+        }
+    }
+
+    @Override
+    public ExamSchedule update(ExamSchedule entity) {
+        lock.writeLock().lock();
+        try {
+            Document doc = loadDocument();
+            Element root = doc.getDocumentElement();
+            NodeList nodes = root.getElementsByTagName(getElementName());
+            for (int i = 0; i < nodes.getLength(); i++) {
+                Element element = (Element) nodes.item(i);
+                if (Integer.parseInt(getElementText(element, "id")) == entity.getId()) {
+                    root.replaceChild(entityToElement(doc, entity), element);
+                    saveDocument(doc);
+                    return entity;
+                }
+            }
+            return null; // Or throw an exception if not found
+        } finally {
+            lock.writeLock().unlock();
+        }
+    }
+
+    @Override
+    public void delete(Integer id) {
+        lock.writeLock().lock();
+        try {
+            Document doc = loadDocument();
+            Element root = doc.getDocumentElement();
+            NodeList nodes = root.getElementsByTagName(getElementName());
+            for (int i = 0; i < nodes.getLength(); i++) {
+                Element element = (Element) nodes.item(i);
+                if (Integer.parseInt(getElementText(element, "id")) == id) {
+                    root.removeChild(element);
+                    saveDocument(doc);
+                    return;
+                }
+            }
+        } finally {
+            lock.writeLock().unlock();
+        }
+    }
+
+    @Override
+    public List<ExamSchedule> getAll() {
+        lock.readLock().lock();
+        try {
+            List<ExamSchedule> examSchedules = new ArrayList<>();
+            Document doc = loadDocument();
+            NodeList nodes = doc.getElementsByTagName(getElementName());
+            for (int i = 0; i < nodes.getLength(); i++) {
+                examSchedules.add(elementToEntity((Element) nodes.item(i)));
+            }
+            return examSchedules;
+        } finally {
+            lock.readLock().unlock();
+        }
+    }
+}

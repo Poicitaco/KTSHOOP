@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mockExams>
+    <mockExam>
+        <id>1</id>
+        <title>Đề thi thử A1 - Lần 1</title>
+        <description>Đề thi thử bằng lái xe A1</description>
+        <examTypeId>1</examTypeId>
+        <duration>30</duration>
+        <passingScore>80</passingScore>
+        <status>ACTIVE</status>
+        <createdDate>2025-07-31</createdDate>
+    </mockExam>
+    <mockExam>
+        <id>2</id>
+        <title>Đề thi thử B1 - Lần 1</title>
+        <description>Đề thi thử bằng lái xe B1</description>
+        <examTypeId>3</examTypeId>
+        <duration>45</duration>
+        <passingScore>85</passingScore>
+        <status>ACTIVE</status>
+        <createdDate>2025-07-31</createdDate>
+    </mockExam>
+</mockExams> 

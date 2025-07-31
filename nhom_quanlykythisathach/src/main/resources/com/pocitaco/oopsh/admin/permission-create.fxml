@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pocitaco.oopsh.controllers.admin.PermissionCreateController" styleClass="content-area" spacing="20">
+    <children>
+        <Label styleClass="page-title" text="Create New Permission" />
+        <GridPane hgap="20" vgap="15">
+            <padding>
+                <Insets top="20" />
+            </padding>
+
+            <Label text="Role:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+            <MFXComboBox fx:id="cmbRole" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+            <Label text="Functionality:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+            <MFXTextField fx:id="txtFunctionality" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+        </GridPane>
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <children>
+                <MFXButton fx:id="btnCancel" styleClass="btn-secondary" text="Cancel" />
+                <MFXButton fx:id="btnSave" styleClass="btn-primary" text="Save Permission" />
+            </children>
+        </HBox>
+    </children>
+</VBox>

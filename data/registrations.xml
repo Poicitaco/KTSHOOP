@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<registrations>
+    <registration>
+        <id>1</id>
+        <candidateId>3</candidateId>
+        <examScheduleId>1</examScheduleId>
+        <registrationDate>2025-08-01</registrationDate>
+        <status>CONFIRMED</status>
+    </registration>
+    <registration>
+        <id>2</id>
+        <candidateId>3</candidateId>
+        <examScheduleId>2</examScheduleId>
+        <registrationDate>2025-08-02</registrationDate>
+        <status>PENDING</status>
+    </registration>
+</registrations> 

@@ -3,20 +3,34 @@ package com.pocitaco.oopsh.models;
 import com.pocitaco.oopsh.enums.PaymentStatus;
 
 import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class Payment {
     private int id;
     private int userId;
     private int examTypeId;
+    private int registrationId;
     private double amount;
     private LocalDateTime paymentDate;
+    private LocalDate dueDate;
     private PaymentStatus status;
+    private String paymentMethod;
+    private String transactionId;
+    private String description;
 
     public Payment() {
-        this.paymentDate = LocalDateTime.now();
         this.status = PaymentStatus.PENDING;
     }
 
+    public Payment(int userId, int registrationId, double amount) {
+        this.userId = userId;
+        this.registrationId = registrationId;
+        this.amount = amount;
+        this.status = PaymentStatus.PENDING;
+        this.dueDate = LocalDate.now().plusDays(7); // Default 7 days due
+    }
+
+    // Getters and Setters
     public int getId() {
         return id;
     }
@@ -41,6 +55,14 @@ public class Payment {
         this.examTypeId = examTypeId;
     }
 
+    public int getRegistrationId() {
+        return registrationId;
+    }
+
+    public void setRegistrationId(int registrationId) {
+        this.registrationId = registrationId;
+    }
+
     public double getAmount() {
         return amount;
     }
@@ -57,6 +79,14 @@ public class Payment {
         this.paymentDate = paymentDate;
     }
 
+    public LocalDate getDueDate() {
+        return dueDate;
+    }
+
+    public void setDueDate(LocalDate dueDate) {
+        this.dueDate = dueDate;
+    }
+
     public PaymentStatus getStatus() {
         return status;
     }
@@ -65,15 +95,53 @@ public class Payment {
         this.status = status;
     }
 
+    public String getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
+    }
+
+    public String getTransactionId() {
+        return transactionId;
+    }
+
+    public void setTransactionId(String transactionId) {
+        this.transactionId = transactionId;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    // Convenience methods for String status handling
+    public String getStatusAsString() {
+        return status != null ? status.toString() : "UNKNOWN";
+    }
+
+    public void setStatus(String statusString) {
+        try {
+            this.status = PaymentStatus.valueOf(statusString);
+        } catch (IllegalArgumentException e) {
+            this.status = PaymentStatus.PENDING;
+        }
+    }
+
     @Override
     public String toString() {
         return "Payment{" +
                 "id=" + id +
                 ", userId=" + userId +
-                ", examTypeId=" + examTypeId +
+                ", registrationId=" + registrationId +
                 ", amount=" + amount +
                 ", paymentDate=" + paymentDate +
                 ", status=" + status +
+                ", paymentMethod='" + paymentMethod + '\'' +
                 '}';
     }
 }

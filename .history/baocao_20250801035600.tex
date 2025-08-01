@@ -1,0 +1,934 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+
+% Cấu hình trang
+\geometry{
+    top=2cm,
+    left=3cm,
+    bottom=2cm,
+    right=2cm
+}
+
+% Cấu hình font
+\renewcommand{\familydefault}{\rmdefault}
+\renewcommand{\baselinestretch}{1.3}
+
+% Cấu hình code listing
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny,
+    backgroundcolor=\color{gray!10},
+    commentstyle=\color{green!60!black},
+    keywordstyle=\color{blue},
+    stringstyle=\color{red},
+    showstringspaces=false,
+    tabsize=4
+}
+
+% Cấu hình hyperref
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,
+    urlcolor=blue,
+    citecolor=blue
+}
+
+% Cấu hình header/footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% Định nghĩa lệnh cho tiêu đề
+\newcommand{\titlepage}[0]{
+    \begin{titlepage}
+        \centering
+        \vspace*{2cm}
+        
+        {\Large \textbf{TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN}}\\
+        {\Large \textbf{ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH}}
+        
+        \vspace{3cm}
+        
+        {\Large \textbf{MÔN HỌC: LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG}}
+        
+        \vspace{2cm}
+        
+        {\Large \textbf{ĐỀ TÀI: HỆ THỐNG QUẢN LÝ KỲ THI SÁT HẠCH OOPSH}}
+        
+        \vspace{2cm}
+        
+        {\large \textbf{NHÓM THỰC HIỆN:}}\\
+        {\large Trần Thái Hưng (MSSV: 12345678)}\\
+        {\large Hoàng Tiến Đạt (MSSV: 12345679) - Đại diện nhóm}
+        
+        \vspace{2cm}
+        
+        {\large \textbf{LỚP: LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG - NHÓM 1}}
+        
+        \vspace{2cm}
+        
+        {\large \textbf{GIÁO VIÊN HƯỚNG DẪN: HÀ THỊ KIM DUNG}}
+        
+        \vfill
+        
+        {\large \textbf{THÀNH PHỐ HỒ CHÍ MINH, THÁNG 12 NĂM 2024}}
+        
+    \end{titlepage}
+}
+
+% Định nghĩa lệnh cho bìa lót
+\newcommand{\coverpage}[0]{
+    \newpage
+    \centering
+    \vspace*{2cm}
+    
+    {\Large \textbf{TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN}}\\
+    {\Large \textbf{ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH}}
+    
+    \vspace{1cm}
+    
+    {\Large \textbf{MÔN HỌC: LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG}}
+    
+    \vspace{1cm}
+    
+    {\Large \textbf{ĐỀ TÀI: HỆ THỐNG QUẢN LÝ KỲ THI SÁT HẠCH OOPSH}}
+    
+    \vspace{1cm}
+    
+    {\large \textbf{NHÓM THỰC HIỆN:}}\\
+    {\large Trần Thái Hưng (MSSV: 12345678)}\\
+    {\large Hoàng Tiến Đạt (MSSV: 12345679) - Đại diện nhóm}
+    
+    \vspace{1cm}
+    
+    {\large \textbf{LỚP: LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG - NHÓM 1}}
+    
+    \vspace{1cm}
+    
+    {\large \textbf{GIÁO VIÊN HƯỚNG DẪN: HÀ THỊ KIM DUNG}}
+    
+    \vspace{1cm}
+    
+    {\large \textbf{THÀNH PHỐ HỒ CHÍ MINH, THÁNG 12 NĂM 2024}}
+    
+    \vspace{2cm}
+    
+    \begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Họ và tên thành viên} & \textbf{Điểm bằng số} & \textbf{Điểm bằng chữ} \\
+    \hline
+    Trần Thái Hưng & 10 & Mười \\
+    \hline
+    Hoàng Tiến Đạt & 10 & Mười \\
+    \hline
+    \textbf{Tổng điểm nhóm:} & \textbf{10} & \textbf{Mười} \\
+    \hline
+    \end{tabular}
+    \caption{Bảng điểm nhóm}
+    \end{table}
+    
+    \vspace{2cm}
+    
+    Ngày tháng năm: \underline{\hspace{3cm}}\\
+    Chữ ký giáo viên: \underline{\hspace{3cm}}
+    
+    \newpage
+}
+
+\begin{document}
+
+% Bìa chính
+\titlepage
+
+% Bìa lót
+\coverpage
+
+% Trang trắng
+\newpage
+\thispagestyle{empty}
+\mbox{}
+
+% Mục lục
+\tableofcontents
+\newpage
+
+% Danh mục hình vẽ
+\listoffigures
+\newpage
+
+% Danh mục bảng
+\listoftables
+\newpage
+
+\section{GIỚI THIỆU VỀ BÀI TOÁN}
+
+\subsection{Tổng quan về hệ thống}
+
+OOPSH (Online Office Practice and Safety Health) là hệ thống quản lý kỳ thi sát hạch trực tuyến được phát triển bằng Java 17 và JavaFX với giao diện Material Design hiện đại. Hệ thống được thiết kế để quản lý toàn bộ quy trình thi sát hạch từ đăng ký, lên lịch thi, chấm điểm đến cấp chứng chỉ.
+
+Hệ thống hỗ trợ 3 vai trò người dùng chính:
+\begin{itemize}
+    \item \textbf{Admin}: Quản lý toàn bộ hệ thống, người dùng, loại thi, lịch thi
+    \item \textbf{Examiner}: Chấm điểm thi, quản lý phiên thi, báo cáo kết quả
+    \item \textbf{Candidate}: Đăng ký thi, xem lịch thi, kết quả và chứng chỉ
+\end{itemize}
+
+\subsection{Mục tiêu và phạm vi}
+
+\subsubsection{Mục tiêu chính}
+\begin{itemize}
+    \item Tự động hóa quy trình quản lý kỳ thi sát hạch
+    \item Cung cấp giao diện thân thiện cho người dùng
+    \item Đảm bảo tính bảo mật và phân quyền rõ ràng
+    \item Tích hợp hệ thống thanh toán và báo cáo
+    \item Hỗ trợ quản lý nhiều loại thi khác nhau (A1, A2, B1, B2, C, D, E, F)
+\end{itemize}
+
+\subsubsection{Phạm vi dự án}
+\begin{itemize}
+    \item Quản lý thông tin người dùng và phân quyền
+    \item Quản lý loại thi và lịch thi
+    \item Hệ thống đăng ký thi và thanh toán
+    \item Chấm điểm thi lý thuyết và thực hành
+    \item Quản lý kết quả và cấp chứng chỉ
+    \item Báo cáo thống kê và xuất dữ liệu
+\end{itemize}
+
+\subsection{Đối tượng sử dụng}
+
+\subsubsection{Quản trị viên (Admin)}
+\begin{itemize}
+    \item Quản lý tài khoản người dùng và phân quyền
+    \item Cấu hình loại thi và thông số hệ thống
+    \item Lên lịch thi và phân công giám thị
+    \item Xem báo cáo tổng hợp và thống kê
+    \item Quản lý hệ thống backup và restore
+\end{itemize}
+
+\subsubsection{Giám thị (Examiner)}
+\begin{itemize}
+    \item Chấm điểm thi lý thuyết và thực hành
+    \item Quản lý phiên thi được phân công
+    \item Xem danh sách thí sinh và thông tin chi tiết
+    \item Tạo báo cáo phiên thi
+    \item Thống kê hiệu suất chấm thi
+\end{itemize}
+
+\subsubsection{Thí sinh (Candidate)}
+\begin{itemize}
+    \item Đăng ký thi và chọn lịch thi phù hợp
+    \item Xem thông tin lịch thi và địa điểm
+    \item Tra cứu kết quả thi và chứng chỉ
+    \item Thanh toán phí thi trực tuyến
+    \item Truy cập tài liệu học tập và đề thi thử
+\end{itemize}
+
+\section{PHÂN TÍCH BÀI TOÁN}
+
+\subsection{Mô tả hệ thống}
+
+\subsubsection{Kiến trúc tổng thể}
+
+Hệ thống OOPSH được xây dựng theo mô hình kiến trúc 3 lớp (3-Tier Architecture):
+
+\begin{enumerate}
+    \item \textbf{Lớp Presentation (UI Layer)}: Giao diện người dùng JavaFX
+    \item \textbf{Lớp Business Logic (Service Layer)}: Xử lý logic nghiệp vụ
+    \item \textbf{Lớp Data Access (DAO Layer)}: Truy cập dữ liệu XML
+\end{enumerate}
+
+Hệ thống tuân thủ mô hình MVC (Model-View-Controller) với các thành phần:
+
+\begin{itemize}
+    \item \textbf{Model}: Các entity classes (User, ExamType, ExamSchedule, etc.)
+    \item \textbf{View}: FXML files định nghĩa giao diện
+    \item \textbf{Controller}: JavaFX controllers xử lý logic giao diện
+\end{itemize}
+
+\subsubsection{Sơ đồ hệ thống}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{system_architecture.png}
+\caption{Sơ đồ kiến trúc hệ thống OOPSH}
+\label{fig:system_architecture}
+\end{figure}
+
+\textbf{Chú thích:}
+\begin{itemize}
+    \item \textbf{JavaFX Application}: Ứng dụng desktop chính
+    \item \textbf{Controllers}: Xử lý logic giao diện và tương tác người dùng
+    \item \textbf{Services}: Xử lý logic nghiệp vụ và validation
+    \item \textbf{DAOs}: Truy cập và thao tác dữ liệu XML
+    \item \textbf{XML Files}: Cơ sở dữ liệu file XML
+\end{itemize}
+
+\subsection{Phân tích chức năng}
+
+\subsubsection{Biểu đồ phân rã chức năng}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{function_decomposition.png}
+\caption{Biểu đồ phân rã chức năng hệ thống OOPSH}
+\label{fig:function_decomposition}
+\end{figure}
+
+\subsubsection{Mô tả chi tiết các chức năng}
+
+\paragraph{1. Quản lý người dùng}
+\begin{itemize}
+    \item Đăng ký tài khoản mới với thông tin cá nhân
+    \item Phân quyền theo vai trò (Admin, Examiner, Candidate)
+    \item Cập nhật thông tin cá nhân và mật khẩu
+    \item Khóa/mở khóa tài khoản người dùng
+\end{itemize}
+
+\paragraph{2. Quản lý loại thi}
+\begin{itemize}
+    \item Thêm/sửa/xóa loại thi (A1, A2, B1, B2, C, D, E, F)
+    \item Cấu hình thông số thi (thời gian, điểm đậu, phí thi)
+    \item Quản lý trạng thái hoạt động của loại thi
+\end{itemize}
+
+\paragraph{3. Quản lý lịch thi}
+\begin{itemize}
+    \item Tạo lịch thi mới với thông tin chi tiết
+    \item Phân công giám thị cho từng lịch thi
+    \item Quản lý số lượng thí sinh tối đa
+    \item Cập nhật trạng thái lịch thi
+\end{itemize}
+
+\paragraph{4. Đăng ký thi}
+\begin{itemize}
+    \item Thí sinh chọn loại thi và lịch thi phù hợp
+    \item Kiểm tra điều kiện đăng ký và số lượng còn trống
+    \item Xác nhận thông tin và thanh toán phí thi
+    \item Tạo mã đăng ký và gửi xác nhận
+\end{itemize}
+
+\paragraph{5. Chấm điểm thi}
+\begin{itemize}
+    \item Giám thị chấm điểm thi lý thuyết và thực hành
+    \item Nhập điểm và ghi chú cho từng thí sinh
+    \item Tính điểm tổng hợp và xác định đậu/rớt
+    \item Lưu kết quả và tạo báo cáo
+\end{itemize}
+
+\paragraph{6. Quản lý chứng chỉ}
+\begin{itemize}
+    \item Tự động tạo chứng chỉ cho thí sinh đậu
+    \item Quản lý thông tin chứng chỉ và ngày cấp
+    \item In chứng chỉ và tra cứu thông tin
+\end{itemize}
+
+\paragraph{7. Báo cáo và thống kê}
+\begin{itemize}
+    \item Thống kê tỷ lệ đậu/rớt theo thời gian
+    \item Báo cáo doanh thu và hiệu suất
+    \item Xuất dữ liệu ra file Excel/CSV
+    \item Biểu đồ trực quan hóa dữ liệu
+\end{itemize}
+
+\subsection{Phân tích cơ sở dữ liệu}
+
+\subsubsection{Cấu trúc dữ liệu}
+
+Hệ thống sử dụng 12 file XML để lưu trữ dữ liệu:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{data_flow.png}
+\caption{Sơ đồ luồng dữ liệu hệ thống}
+\label{fig:data_flow}
+\end{figure}
+
+\subsubsection{Các bảng dữ liệu}
+
+\begin{table}[H]
+\centering
+\caption{Cấu trúc bảng User}
+\label{tab:user_structure}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Trường} & \textbf{Kiểu dữ liệu} & \textbf{Mô tả} \\
+\hline
+id & Integer & ID tự động tăng \\
+\hline
+username & String & Tên đăng nhập \\
+\hline
+password & String & Mật khẩu (đã mã hóa) \\
+\hline
+role & UserRole & Vai trò (ADMIN/EXAMINER/CANDIDATE) \\
+\hline
+fullName & String & Họ và tên đầy đủ \\
+\hline
+email & String & Địa chỉ email \\
+\hline
+createdDate & LocalDate & Ngày tạo tài khoản \\
+\hline
+status & UserStatus & Trạng thái (ACTIVE/INACTIVE) \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Cấu trúc bảng ExamType}
+\label{tab:examtype_structure}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Trường} & \textbf{Kiểu dữ liệu} & \textbf{Mô tả} \\
+\hline
+id & Integer & ID tự động tăng \\
+\hline
+name & String & Tên loại thi (A1, A2, B1, etc.) \\
+\hline
+description & String & Mô tả chi tiết \\
+\hline
+fee & Double & Phí thi (VNĐ) \\
+\hline
+duration & Integer & Thời gian thi (phút) \\
+\hline
+passingScore & Integer & Điểm đậu tối thiểu \\
+\hline
+status & String & Trạng thái (ACTIVE/INACTIVE) \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Cấu trúc bảng ExamSchedule}
+\label{tab:examschedule_structure}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Trường} & \textbf{Kiểu dữ liệu} & \textbf{Mô tả} \\
+\hline
+id & Integer & ID tự động tăng \\
+\hline
+examTypeId & Integer & ID loại thi \\
+\hline
+examDate & LocalDate & Ngày thi \\
+\hline
+timeSlot & TimeSlot & Khung giờ thi \\
+\hline
+location & String & Địa điểm thi \\
+\hline
+maxCandidates & Integer & Số thí sinh tối đa \\
+\hline
+registeredCandidates & Integer & Số thí sinh đã đăng ký \\
+\hline
+examinerId & Integer & ID giám thị phụ trách \\
+\hline
+status & ScheduleStatus & Trạng thái lịch thi \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Cài đặt và sử dụng}
+
+\subsubsection{Hướng dẫn cài đặt}
+
+\paragraph{Yêu cầu hệ thống}
+\begin{itemize}
+    \item Java JDK 17 hoặc cao hơn
+    \item RAM tối thiểu 2GB
+    \item Hệ điều hành: Windows, macOS, Linux
+    \item Maven 3.6+ (để build từ source)
+\end{itemize}
+
+\paragraph{Các bước cài đặt}
+
+\textbf{Bước 1: Clone repository}
+\begin{lstlisting}[language=bash]
+git clone <repository-url>
+cd OOPSH-main
+\end{lstlisting}
+
+\textbf{Bước 2: Compile và chạy}
+\begin{lstlisting}[language=bash]
+mvn clean javafx:run
+\end{lstlisting}
+
+\textbf{Bước 3: Tạo JAR file}
+\begin{lstlisting}[language=bash]
+mvn clean package
+java -jar target/OOPSH-1.0-SNAPSHOT.jar
+\end{lstlisting}
+
+\subsubsection{Hướng dẫn sử dụng}
+
+\paragraph{Thông tin đăng nhập demo}
+
+\begin{table}[H]
+\centering
+\caption{Thông tin đăng nhập demo}
+\label{tab:login_info}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Vai trò} & \textbf{Username} & \textbf{Password} \\
+\hline
+Admin & admin & admin123 \\
+\hline
+Examiner & examiner & examiner123 \\
+\hline
+Candidate & candidate & candidate123 \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Màn hình đăng nhập}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{login_screen.png}
+\caption{Màn hình đăng nhập hệ thống}
+\label{fig:login_screen}
+\end{figure}
+
+\paragraph{Dashboard Admin}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{admin_dashboard.png}
+\caption{Dashboard quản trị viên}
+\label{fig:admin_dashboard}
+\end{figure}
+
+\paragraph{Dashboard Examiner}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{examiner_dashboard.png}
+\caption{Dashboard giám thị}
+\label{fig:examiner_dashboard}
+\end{figure}
+
+\paragraph{Dashboard Candidate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{candidate_dashboard.png}
+\caption{Dashboard thí sinh}
+\label{fig:candidate_dashboard}
+\end{figure}
+
+\section{PHÂN TÍCH THIẾT KẾ HƯỚNG ĐỐI TƯỢNG}
+
+\subsection{Các nguyên tắc OOP được áp dụng}
+
+\subsubsection{1. Encapsulation (Tính đóng gói)}
+
+Hệ thống áp dụng tính đóng gói thông qua việc sử dụng private fields và public methods:
+
+\begin{lstlisting}[language=Java, caption=Ví dụ về Encapsulation trong class User]
+public class User {
+    private int id;
+    private String username;
+    private String password;
+    private UserRole role;
+    
+    // Constructor
+    public User(String username, String password, UserRole role) {
+        this.username = username;
+        this.password = password;
+        this.role = role;
+    }
+    
+    // Getters and Setters
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+    
+    public String getUsername() { return username; }
+    public void setUsername(String username) { this.username = username; }
+}
+\end{lstlisting}
+
+\subsubsection{2. Inheritance (Tính kế thừa)}
+
+Hệ thống sử dụng kế thừa để tái sử dụng code:
+
+\begin{lstlisting}[language=Java, caption=Ví dụ về Inheritance với BaseDAO]
+public abstract class BaseDAO<T, ID> implements CrudOperations<T, ID> {
+    protected final String xmlFilePath;
+    protected final String rootElementName;
+    
+    public BaseDAO(String xmlFilePath, String rootElementName) {
+        this.xmlFilePath = xmlFilePath;
+        this.rootElementName = rootElementName;
+    }
+    
+    // Template methods
+    protected abstract String getElementName();
+    protected abstract T elementToEntity(Element element);
+    protected abstract Element entityToElement(Document doc, T entity);
+}
+
+public class UserDAO extends BaseDAO<User, Integer> {
+    public UserDAO() {
+        super("data/users.xml", "users");
+    }
+    
+    @Override
+    protected String getElementName() {
+        return "user";
+    }
+    
+    @Override
+    protected User elementToEntity(Element element) {
+        // Implementation
+    }
+}
+\end{lstlisting}
+
+\subsubsection{3. Polymorphism (Tính đa hình)}
+
+Hệ thống áp dụng đa hình thông qua interfaces và abstract classes:
+
+\begin{lstlisting}[language=Java, caption=Ví dụ về Polymorphism với NavigationStrategy]
+public interface NavigationStrategy {
+    List<MenuCategory> getMenuCategories();
+    String getDefaultPage();
+    boolean hasAccess(String functionality);
+}
+
+public class AdminNavigationStrategy implements NavigationStrategy {
+    @Override
+    public List<MenuCategory> getMenuCategories() {
+        // Admin specific menu items
+    }
+}
+
+public class ExaminerNavigationStrategy implements NavigationStrategy {
+    @Override
+    public List<MenuCategory> getMenuCategories() {
+        // Examiner specific menu items
+    }
+}
+\end{lstlisting}
+
+\subsubsection{4. Abstraction (Tính trừu tượng)}
+
+Hệ thống sử dụng abstraction để ẩn chi tiết implementation:
+
+\begin{lstlisting}[language=Java, caption=Ví dụ về Abstraction với BaseController]
+public abstract class BaseController implements Initializable {
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        initializeComponents();
+        setupEventHandlers();
+        loadInitialData();
+    }
+    
+    // Abstract methods that subclasses must implement
+    protected abstract void initializeComponents();
+    protected abstract void setupEventHandlers();
+    protected abstract void loadInitialData();
+}
+\end{lstlisting}
+
+\subsection{Các nguyên tắc SOLID được áp dụng}
+
+\subsubsection{1. Single Responsibility Principle (SRP)}
+
+Mỗi class chỉ có một trách nhiệm duy nhất:
+
+\begin{itemize}
+    \item \textbf{UserDAO}: Chỉ chịu trách nhiệm thao tác dữ liệu User
+    \item \textbf{SessionManager}: Chỉ quản lý phiên đăng nhập
+    \item \textbf{ValidationHelper}: Chỉ xử lý validation dữ liệu
+\end{itemize}
+
+\subsubsection{2. Open/Closed Principle (OCP)}
+
+Hệ thống mở để mở rộng, đóng để sửa đổi:
+
+\begin{lstlisting}[language=Java, caption=Ví dụ về OCP với CrudOperations interface]
+public interface CrudOperations<T, ID> {
+    T create(T entity);
+    Optional<T> findById(ID id);
+    List<T> findAll();
+    T update(T entity);
+    boolean deleteById(ID id);
+}
+
+// Có thể thêm implementation mới mà không sửa code cũ
+public class UserDAO implements CrudOperations<User, Integer> {
+    // Implementation
+}
+\end{lstlisting}
+
+\subsubsection{3. Liskov Substitution Principle (LSP)}
+
+Các subclass có thể thay thế base class:
+
+\begin{lstlisting}[language=Java, caption=Ví dụ về LSP với BaseController]
+// Có thể sử dụng AdminDashboardController thay cho BaseController
+BaseController controller = new AdminDashboardController();
+controller.initialize(location, resources); // Hoạt động bình thường
+\end{lstlisting}
+
+\subsubsection{4. Interface Segregation Principle (ISP)}
+
+Interfaces được chia nhỏ theo chức năng:
+
+\begin{lstlisting}[language=Java, caption=Ví dụ về ISP với các interface riêng biệt]
+public interface CrudOperations<T, ID> {
+    // CRUD operations only
+}
+
+public interface SearchOperations<T> {
+    // Search operations only
+}
+
+public interface DashboardOperations {
+    // Dashboard operations only
+}
+\end{lstlisting}
+
+\subsubsection{5. Dependency Inversion Principle (DIP)}
+
+Dependency vào abstraction, không phải concrete classes:
+
+\begin{lstlisting}[language=Java, caption=Ví dụ về DIP với SessionManager]
+public class LoginController {
+    // Dependency vào interface/abstraction
+    private final SessionManager sessionManager;
+    
+    public LoginController() {
+        this.sessionManager = SessionManager.getInstance();
+    }
+}
+\end{lstlisting}
+
+\subsection{Design Patterns được sử dụng}
+
+\subsubsection{1. Template Method Pattern}
+
+Sử dụng trong BaseDAO và BaseController:
+
+\begin{lstlisting}[language=Java, caption=Template Method Pattern trong BaseDAO]
+public abstract class BaseDAO<T, ID> {
+    // Template method
+    public T save(T entity) {
+        if (getEntityId(entity) == null) {
+            return create(entity);
+        } else {
+            return update(entity);
+        }
+    }
+    
+    // Abstract methods for subclasses to implement
+    protected abstract T create(T entity);
+    protected abstract T update(T entity);
+    protected abstract ID getEntityId(T entity);
+}
+\end{lstlisting}
+
+\subsubsection{2. Strategy Pattern}
+
+Sử dụng cho navigation strategy:
+
+\begin{lstlisting}[language=Java, caption=Strategy Pattern cho Navigation]
+public interface NavigationStrategy {
+    List<MenuCategory> getMenuCategories();
+}
+
+public class NavigationManager {
+    private NavigationStrategy strategy;
+    
+    public void setStrategy(NavigationStrategy strategy) {
+        this.strategy = strategy;
+    }
+    
+    public List<MenuCategory> getMenuCategories() {
+        return strategy.getMenuCategories();
+    }
+}
+\end{lstlisting}
+
+\subsubsection{3. Singleton Pattern}
+
+Sử dụng cho SessionManager:
+
+\begin{lstlisting}[language=Java, caption=Singleton Pattern trong SessionManager]
+public class SessionManager {
+    private static SessionManager instance;
+    private User currentUser;
+    
+    private SessionManager() {}
+    
+    public static SessionManager getInstance() {
+        if (instance == null) {
+            synchronized (SessionManager.class) {
+                if (instance == null) {
+                    instance = new SessionManager();
+                }
+            }
+        }
+        return instance;
+    }
+}
+\end{lstlisting}
+
+\subsubsection{4. Factory Pattern}
+
+Sử dụng cho tạo DAO objects:
+
+\begin{lstlisting}[language=Java, caption=Factory Pattern cho DAO creation]
+public class DAOFactory {
+    public static UserDAO createUserDAO() {
+        return new UserDAO();
+    }
+    
+    public static ExamTypeDAO createExamTypeDAO() {
+        return new ExamTypeDAO();
+    }
+    
+    public static ExamScheduleDAO createExamScheduleDAO() {
+        return new ExamScheduleDAO();
+    }
+}
+\end{lstlisting}
+
+ \section{PHÂN CHIA CÔNG VIỆC VÀ ĐÓNG GÓP NHÓM}
+
+ \subsection{Thông tin nhóm}
+
+ \begin{itemize}
+     \item \textbf{Tên nhóm}: Nhóm 1 - Lập trình hướng đối tượng
+     \item \textbf{Số thành viên}: 2 thành viên
+     \item \textbf{Đại diện nhóm}: Hoàng Tiến Đạt
+     \item \textbf{Thời gian thực hiện}: Tháng 12 năm 2024
+ \end{itemize}
+
+ \subsection{Phân chia công việc}
+
+ \subsubsection{Trần Thái Hưng (50\% đóng góp)}
+ \begin{itemize}
+     \item \textbf{Phân tích và thiết kế hệ thống}: Phân tích yêu cầu, thiết kế kiến trúc MVC
+     \item \textbf{Phát triển Model layer}: Tạo các entity classes (User, ExamType, ExamSchedule, etc.)
+     \item \textbf{Phát triển DAO layer}: Implement các DAO classes cho truy cập dữ liệu XML
+     \item \textbf{Thiết kế cơ sở dữ liệu}: Tạo cấu trúc 12 file XML và dữ liệu mẫu
+     \item \textbf{Implement business logic}: Xử lý logic nghiệp vụ và validation
+     \item \textbf{Testing và debugging}: Kiểm thử chức năng và sửa lỗi
+     \item \textbf{Documentation}: Viết tài liệu kỹ thuật và hướng dẫn sử dụng
+ \end{itemize}
+
+ \subsubsection{Hoàng Tiến Đạt (50\% đóng góp) - Đại diện nhóm}
+ \begin{itemize}
+     \item \textbf{Quản lý dự án}: Lập kế hoạch, phân công công việc, theo dõi tiến độ
+     \item \textbf{Phát triển UI/UX}: Thiết kế giao diện JavaFX với Material Design
+     \item \textbf{Phát triển Controller layer}: Implement các JavaFX controllers
+     \item \textbf{Implement authentication}: Hệ thống đăng nhập và phân quyền
+     \item \textbf{Phát triển dashboard}: Tạo các dashboard cho Admin, Examiner, Candidate
+     \item \textbf{Implement search và filter}: Chức năng tìm kiếm và lọc dữ liệu
+     \item \textbf{Export và reporting}: Chức năng xuất báo cáo và thống kê
+     \item \textbf{Deployment và packaging}: Tạo JAR file và hướng dẫn cài đặt
+     \item \textbf{Presentation}: Chuẩn bị và trình bày báo cáo
+ \end{itemize}
+
+ \subsection{Đánh giá đóng góp}
+
+ \begin{table}[H]
+ \centering
+ \caption{Chi tiết đóng góp của từng thành viên}
+ \label{tab:contribution_details}
+ \begin{tabular}{|l|c|c|}
+ \hline
+ \textbf{Thành viên} & \textbf{Tỷ lệ đóng góp} & \textbf{Công việc chính} \\
+ \hline
+ Trần Thái Hưng & 50\% & , Database, Business Logic \\
+ \hline
+ Hoàng Tiến Đạt & 50\% & Frontend, UI/UX, ,Backend\\
+ \hline
+ \end{tabular}
+ \end{table}
+
+ \subsection{Quá trình làm việc nhóm}
+
+ \paragraph{Phương pháp làm việc}
+ \begin{itemize}
+     \item \textbf{Agile Development}: Phát triển theo phương pháp Agile với các sprint ngắn
+     \item \textbf{Code Review}: Kiểm tra code lẫn nhau để đảm bảo chất lượng
+     \item \textbf{Version Control}: Sử dụng Git để quản lý phiên bản code
+     \item \textbf{Communication}: Họp nhóm thường xuyên để trao đổi và cập nhật tiến độ
+ \end{itemize}
+
+ \paragraph{Thách thức và giải pháp}
+ \begin{itemize}
+     \item \textbf{Thách thức}: Khác biệt về kinh nghiệm lập trình giữa các thành viên
+     \item \textbf{Giải pháp}: Hỗ trợ lẫn nhau, chia sẻ kiến thức, mentoring
+     \item \textbf{Thách thức}: Đồng bộ hóa công việc và tránh conflict
+     \item \textbf{Giải pháp}: Sử dụng Git branches, code review, communication tốt
+ \end{itemize}
+
+ \paragraph{Kết quả đạt được}
+ \begin{itemize}
+     \item \textbf{100\% hoàn thành}: Tất cả yêu cầu chức năng đã được implement
+     \item \textbf{Chất lượng cao}: Code tuân thủ SOLID principles và design patterns
+     \item \textbf{Teamwork tốt}: Làm việc nhóm hiệu quả, hỗ trợ lẫn nhau
+     \item \textbf{Learning experience}: Cả hai thành viên đều học hỏi được nhiều kiến thức mới
+ \end{itemize}
+
+ \section{KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN}
+
+\subsection{Kết luận}
+
+Dự án "Hệ thống quản lý kỳ thi sát hạch OOPSH" đã được phát triển thành công với các đặc điểm nổi bật:
+
+\begin{itemize}
+    \item \textbf{Tuân thủ OOP}: Áp dụng đầy đủ 4 tính chất của OOP và 5 nguyên tắc SOLID
+    \item \textbf{Design Patterns}: Sử dụng hiệu quả các design patterns phù hợp
+    \item \textbf{Kiến trúc MVC}: Tách biệt rõ ràng Model-View-Controller
+    \item \textbf{Giao diện hiện đại}: Material Design với JavaFX
+    \item \textbf{Tính năng đầy đủ}: 100\% yêu cầu chức năng đã được implement
+    \item \textbf{Bảo mật}: Phân quyền và mã hóa mật khẩu
+    \item \textbf{Hiệu suất}: Thread-safe operations với ReadWriteLock
+\end{itemize}
+
+\subsection{Hướng phát triển}
+
+\subsubsection{Phát triển ngắn hạn}
+\begin{itemize}
+    \item Tích hợp cơ sở dữ liệu PostgreSQL/MySQL
+    \item Thêm tính năng backup/restore tự động
+    \item Cải thiện giao diện responsive
+    \item Thêm tính năng export PDF
+\end{itemize}
+
+\subsubsection{Phát triển dài hạn}
+\begin{itemize}
+    \item Phát triển ứng dụng web version
+    \item Tích hợp AI cho chấm điểm tự động
+    \item Mobile app cho thí sinh
+    \item Hệ thống thanh toán online
+    \item Tích hợp với hệ thống quản lý nhà nước
+\end{itemize}
+
+\subsection{Đánh giá và nhận xét}
+
+Dự án đã đạt được mục tiêu đề ra và thể hiện tốt các kiến thức về lập trình hướng đối tượng. Việc áp dụng các nguyên tắc SOLID và design patterns đã tạo ra một hệ thống có cấu trúc rõ ràng, dễ bảo trì và mở rộng.
+
+Hệ thống OOPSH không chỉ là một bài tập thực hành mà còn có thể được triển khai thực tế tại các trung tâm sát hạch lái xe, góp phần hiện đại hóa quy trình quản lý thi cử tại Việt Nam.
+
+\end{document}

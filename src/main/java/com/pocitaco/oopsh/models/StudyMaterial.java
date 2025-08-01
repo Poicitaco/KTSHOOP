@@ -1,18 +1,34 @@
 package com.pocitaco.oopsh.models;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class StudyMaterial {
     private int id;
     private String title;
     private String description;
     private String fileUrl;
-    private LocalDateTime createdDate;
+    private String filePath;
+    private int examTypeId;
+    private String materialType;
+    private LocalDate uploadDate;
+    private String uploadedBy;
+    private boolean isActive;
 
     public StudyMaterial() {
-        this.createdDate = LocalDateTime.now();
+        this.uploadDate = LocalDate.now();
+        this.isActive = true;
     }
 
+    public StudyMaterial(String title, String description, int examTypeId, String materialType) {
+        this.title = title;
+        this.description = description;
+        this.examTypeId = examTypeId;
+        this.materialType = materialType;
+        this.uploadDate = LocalDate.now();
+        this.isActive = true;
+    }
+
+    // Getters and Setters
     public int getId() {
         return id;
     }
@@ -45,12 +61,61 @@ public class StudyMaterial {
         this.fileUrl = fileUrl;
     }
 
-    public LocalDateTime getCreatedDate() {
-        return createdDate;
+    public String getFilePath() {
+        return filePath;
     }
 
-    public void setCreatedDate(LocalDateTime createdDate) {
-        this.createdDate = createdDate;
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
+    }
+
+    public int getExamTypeId() {
+        return examTypeId;
+    }
+
+    public void setExamTypeId(int examTypeId) {
+        this.examTypeId = examTypeId;
+    }
+
+    public String getMaterialType() {
+        return materialType;
+    }
+
+    public void setMaterialType(String materialType) {
+        this.materialType = materialType;
+    }
+
+    public LocalDate getUploadDate() {
+        return uploadDate;
+    }
+
+    public void setUploadDate(LocalDate uploadDate) {
+        this.uploadDate = uploadDate;
+    }
+
+    public String getUploadedBy() {
+        return uploadedBy;
+    }
+
+    public void setUploadedBy(String uploadedBy) {
+        this.uploadedBy = uploadedBy;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+
+    // For backward compatibility
+    public java.time.LocalDateTime getCreatedDate() {
+        return uploadDate.atStartOfDay();
+    }
+
+    public void setCreatedDate(java.time.LocalDateTime createdDate) {
+        this.uploadDate = createdDate.toLocalDate();
     }
 
     @Override
@@ -58,9 +123,9 @@ public class StudyMaterial {
         return "StudyMaterial{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", fileUrl='" + fileUrl + '\'' +
-                ", createdDate=" + createdDate +
+                ", examTypeId=" + examTypeId +
+                ", materialType='" + materialType + '\'' +
+                ", uploadDate=" + uploadDate +
                 '}';
     }
 }

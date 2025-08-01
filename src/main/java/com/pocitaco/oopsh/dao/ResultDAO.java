@@ -143,8 +143,30 @@ public class ResultDAO {
         result.setUserId(Integer.parseInt(getElementText(resultElement, "userId")));
         result.setExamTypeId(Integer.parseInt(getElementText(resultElement, "examTypeId")));
         result.setScore(Double.parseDouble(getElementText(resultElement, "score")));
+
+        // Parse theory and practical scores if available
+        String theoryScoreText = getElementText(resultElement, "theoryScore");
+        if (!theoryScoreText.isEmpty()) {
+            result.setTheoryScore(Double.parseDouble(theoryScoreText));
+        }
+
+        String practicalScoreText = getElementText(resultElement, "practicalScore");
+        if (!practicalScoreText.isEmpty()) {
+            result.setPracticalScore(Double.parseDouble(practicalScoreText));
+        }
+
+        String totalScoreText = getElementText(resultElement, "totalScore");
+        if (!totalScoreText.isEmpty()) {
+            result.setTotalScore(Double.parseDouble(totalScoreText));
+        }
+
         result.setExamDate(LocalDate.parse(getElementText(resultElement, "examDate"), DATE_FORMATTER));
         result.setStatus(ResultStatus.valueOf(getElementText(resultElement, "status")));
+
+        String notes = getElementText(resultElement, "notes");
+        if (!notes.isEmpty()) {
+            result.setNotes(notes);
+        }
 
         return result;
     }
@@ -244,5 +266,36 @@ public class ResultDAO {
             updateResult(result);
         }
         return result;
+    }
+
+    public List<Result> getAll() {
+        List<Result> results = new ArrayList<>();
+        try {
+            File xmlFile = new File(XML_FILE);
+            if (!xmlFile.exists()) {
+                return results;
+            }
+
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document doc = builder.parse(xmlFile);
+
+            NodeList resultNodes = doc.getElementsByTagName("result");
+            for (int i = 0; i < resultNodes.getLength(); i++) {
+                Node resultNode = resultNodes.item(i);
+                if (resultNode.getNodeType() == Node.ELEMENT_NODE) {
+                    Element resultElement = (Element) resultNode;
+                    Result result = parseResultFromElement(resultElement);
+                    results.add(result);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return results;
+    }
+
+    public void update(Result result) {
+        updateResult(result);
     }
 }

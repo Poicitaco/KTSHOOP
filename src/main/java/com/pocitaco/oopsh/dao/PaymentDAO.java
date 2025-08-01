@@ -239,4 +239,40 @@ public class PaymentDAO {
         }
         return payment;
     }
+
+    public List<Payment> findByUserId(int userId) {
+        List<Payment> userPayments = new ArrayList<>();
+        try {
+            File xmlFile = new File(XML_FILE);
+            if (!xmlFile.exists()) {
+                return userPayments;
+            }
+
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document doc = builder.parse(xmlFile);
+
+            NodeList paymentNodes = doc.getElementsByTagName("payment");
+
+            for (int i = 0; i < paymentNodes.getLength(); i++) {
+                Node paymentNode = paymentNodes.item(i);
+                if (paymentNode.getNodeType() == Node.ELEMENT_NODE) {
+                    Element paymentElement = (Element) paymentNode;
+                    int paymentUserId = Integer.parseInt(getElementText(paymentElement, "userId"));
+
+                    if (paymentUserId == userId) {
+                        Payment payment = parsePaymentFromElement(paymentElement);
+                        userPayments.add(payment);
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return userPayments;
+    }
+
+    public void update(Payment payment) {
+        updatePayment(payment);
+    }
 }

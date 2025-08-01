@@ -1,0 +1,101 @@
+package com.pocitaco.oopsh.controllers;
+
+import com.pocitaco.oopsh.dao.UserDAO;
+import com.pocitaco.oopsh.enums.UserRole;
+import com.pocitaco.oopsh.models.User;
+import com.pocitaco.oopsh.ui.screens.AdminDashboardScreen;
+import com.pocitaco.oopsh.ui.screens.CandidateDashboardScreen;
+import com.pocitaco.oopsh.ui.screens.ExaminerDashboardScreen;
+import com.pocitaco.oopsh.utils.DialogUtils;
+import com.pocitaco.oopsh.utils.PasswordUtils;
+import com.pocitaco.oopsh.utils.SessionManager;
+import javafx.animation.*;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+import javafx.util.Duration;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class LoginController implements Initializable {
+
+    @FXML
+    private TextField txtUsername;
+    @FXML
+    private PasswordField txtPassword;
+    @FXML
+    private Button btnLogin;
+
+    private UserDAO userDAO;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        userDAO = new UserDAO();
+    }
+
+    @FXML
+    private void handleLogin(ActionEvent event) {
+        String username = txtUsername.getText().trim();
+        String password = txtPassword.getText();
+
+        if (username.isEmpty() || password.isEmpty()) {
+            DialogUtils.showError("Login Error", "Username and password are required.");
+            return;
+        }
+
+        userDAO.findByUsername(username).ifPresentOrElse(user -> {
+            // Check if user is active
+            if (!"ACTIVE".equals(user.getStatus())) {
+                DialogUtils.showError("Đăng nhập thất bại", "Tài khoản đã bị khóa hoặc không hoạt động!");
+                return;
+            }
+
+            if (PasswordUtils.verifyPassword(password, user.getPassword())) {
+                SessionManager.setCurrentUser(user);
+                navigateToDashboard(user);
+            } else {
+                DialogUtils.showError("Đăng nhập thất bại", "Tên đăng nhập, mật khẩu hoặc vai trò không đúng!");
+            }
+        }, () -> {
+            DialogUtils.showError("Đăng nhập thất bại", "Tên đăng nhập, mật khẩu hoặc vai trò không đúng!");
+        });
+    }
+
+    private void navigateToDashboard(User user) {
+        try {
+            Stage stage = (Stage) btnLogin.getScene().getWindow();
+            
+            switch (user.getRole()) {
+                case ADMIN:
+                    AdminDashboardScreen adminDashboard = new AdminDashboardScreen(stage, user);
+                    adminDashboard.show();
+                    break;
+                case EXAMINER:
+                    ExaminerDashboardScreen examinerDashboard = new ExaminerDashboardScreen(stage, user);
+                    examinerDashboard.show();
+                    break;
+                case CANDIDATE:
+                    CandidateDashboardScreen candidateDashboard = new CandidateDashboardScreen(stage, user);
+                    candidateDashboard.show();
+                    break;
+                default:
+                    DialogUtils.showError("Navigation Error", "Unknown user role: " + user.getRole());
+                    break;
+            }
+        } catch (Exception e) {
+            DialogUtils.showError("Navigation Error", "Could not load the dashboard for role: " + user.getRole());
+            e.printStackTrace();
+        }
+    }
+}

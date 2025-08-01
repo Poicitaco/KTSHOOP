@@ -1,0 +1,576 @@
+[2025-08-01 06:23:25] [SYSTEM] Event: Application Launch | Details: Starting OOPSH v2.0
+[2025-08-01 06:23:25] [INFO] Initializing OOPSH Application v2.0
+[2025-08-01 06:23:25] [DEBUG] Application Configuration:
+[2025-08-01 06:23:25] [DEBUG] Application Configuration:
+  app.data.directory = data
+  app.theme = material-design
+  app.window.width = 1200
+  app.title = OOPSH - Hệ thống sát hạch bằng lái xe
+  app.window.height = 800
+  app.language = vi
+  app.session.timeout = 30
+  app.timezone = Asia/Ho_Chi_Minh
+  app.log.level = INFO
+
+[2025-08-01 06:23:25] [INFO] Primary stage configured successfully
+[2025-08-01 06:23:27] [INFO] Login screen displayed successfully
+[2025-08-01 06:23:27] [SYSTEM] Event: Application Started | Details: OOPSH v2.0 with enhanced architecture
+[2025-08-01 06:23:27] [INFO] 🎨 OOPSH Material Design 3.0 Application đã khởi động!
+[2025-08-01 06:23:27] [INFO] 📋 Backend hoàn thành 100% - UI Material Design mới!
+[2025-08-01 06:23:27] [INFO] 🔧 Enhanced with NavigationManager, ApplicationConfig, and Logger
+[2025-08-01 06:23:46] [SYSTEM] Event: Application Shutdown | Details: User requested application close
+[2025-08-01 06:23:46] [INFO] 👋 OOPSH Application đã tắt!
+[2025-08-01 06:32:14] [SYSTEM] Event: Application Launch | Details: Starting OOPSH v2.0
+[2025-08-01 06:32:15] [INFO] Initializing OOPSH Application v2.0
+[2025-08-01 06:32:15] [DEBUG] Application Configuration:
+[2025-08-01 06:32:15] [DEBUG] Application Configuration:
+  app.data.directory = data
+  app.theme = material-design
+  app.window.width = 1200
+  app.title = OOPSH - Hệ thống sát hạch bằng lái xe
+  app.window.height = 800
+  app.language = vi
+  app.session.timeout = 30
+  app.timezone = Asia/Ho_Chi_Minh
+  app.log.level = INFO
+
+[2025-08-01 06:32:15] [INFO] Primary stage configured successfully
+[2025-08-01 06:32:16] [INFO] Login screen displayed successfully
+[2025-08-01 06:32:16] [SYSTEM] Event: Application Started | Details: OOPSH v2.0 with enhanced architecture
+[2025-08-01 06:32:16] [INFO] 🎨 OOPSH Material Design 3.0 Application đã khởi động!
+[2025-08-01 06:32:16] [INFO] 📋 Backend hoàn thành 100% - UI Material Design mới!
+[2025-08-01 06:32:16] [INFO] 🔧 Enhanced with NavigationManager, ApplicationConfig, and Logger
+[2025-08-01 06:32:41] [SYSTEM] Event: Application Shutdown | Details: User requested application close
+[2025-08-01 06:32:41] [INFO] 👋 OOPSH Application đã tắt!
+[2025-08-01 06:35:23] [SYSTEM] Event: Application Launch | Details: Starting OOPSH v2.0
+[2025-08-01 06:35:23] [INFO] Initializing OOPSH Application v2.0
+[2025-08-01 06:35:23] [DEBUG] Application Configuration:
+[2025-08-01 06:35:23] [DEBUG] Application Configuration:
+  app.data.directory = data
+  app.theme = material-design
+  app.window.width = 1200
+  app.title = OOPSH - Hệ thống sát hạch bằng lái xe
+  app.window.height = 800
+  app.language = vi
+  app.session.timeout = 30
+  app.timezone = Asia/Ho_Chi_Minh
+  app.log.level = INFO
+
+[2025-08-01 06:35:23] [INFO] Primary stage configured successfully
+[2025-08-01 06:35:25] [INFO] Login screen displayed successfully
+[2025-08-01 06:35:25] [SYSTEM] Event: Application Started | Details: OOPSH v2.0 with enhanced architecture
+[2025-08-01 06:35:25] [INFO] 🎨 OOPSH Material Design 3.0 Application đã khởi động!
+[2025-08-01 06:35:25] [INFO] 📋 Backend hoàn thành 100% - UI Material Design mới!
+[2025-08-01 06:35:25] [INFO] 🔧 Enhanced with NavigationManager, ApplicationConfig, and Logger
+[2025-08-01 06:36:13] [SYSTEM] Event: Application Shutdown | Details: User requested application close
+[2025-08-01 06:36:13] [INFO] 👋 OOPSH Application đã tắt!
+[2025-08-01 06:37:12] [SYSTEM] Event: Application Launch | Details: Starting OOPSH v2.0
+[2025-08-01 06:37:12] [INFO] Initializing OOPSH Application v2.0
+[2025-08-01 06:37:12] [DEBUG] Application Configuration:
+[2025-08-01 06:37:12] [DEBUG] Application Configuration:
+  app.data.directory = data
+  app.theme = material-design
+  app.window.width = 1200
+  app.title = OOPSH - Hệ thống sát hạch bằng lái xe
+  app.window.height = 800
+  app.language = vi
+  app.session.timeout = 30
+  app.timezone = Asia/Ho_Chi_Minh
+  app.log.level = INFO
+
+[2025-08-01 06:37:12] [INFO] Primary stage configured successfully
+[2025-08-01 06:37:13] [INFO] Login screen displayed successfully
+[2025-08-01 06:37:13] [SYSTEM] Event: Application Started | Details: OOPSH v2.0 with enhanced architecture
+[2025-08-01 06:37:13] [INFO] 🎨 OOPSH Material Design 3.0 Application đã khởi động!
+[2025-08-01 06:37:13] [INFO] 📋 Backend hoàn thành 100% - UI Material Design mới!
+[2025-08-01 06:37:13] [INFO] 🔧 Enhanced with NavigationManager, ApplicationConfig, and Logger
+[2025-08-01 06:37:57] [SYSTEM] Event: Application Shutdown | Details: User requested application close
+[2025-08-01 06:37:57] [INFO] 👋 OOPSH Application đã tắt!
+[2025-08-01 06:42:04] [SYSTEM] Event: Application Launch | Details: Starting OOPSH v2.0
+[2025-08-01 06:42:04] [INFO] Initializing OOPSH Application v2.0
+[2025-08-01 06:42:04] [DEBUG] Application Configuration:
+[2025-08-01 06:42:04] [DEBUG] Application Configuration:
+  app.data.directory = data
+  app.theme = material-design
+  app.window.width = 1200
+  app.title = OOPSH - Hệ thống sát hạch bằng lái xe
+  app.window.height = 800
+  app.language = vi
+  app.session.timeout = 30
+  app.timezone = Asia/Ho_Chi_Minh
+  app.log.level = INFO
+
+[2025-08-01 06:42:04] [INFO] Primary stage configured successfully
+[2025-08-01 06:42:05] [INFO] Login screen displayed successfully
+[2025-08-01 06:42:05] [SYSTEM] Event: Application Started | Details: OOPSH v2.0 with enhanced architecture
+[2025-08-01 06:42:05] [INFO] 🎨 OOPSH Material Design 3.0 Application đã khởi động!
+[2025-08-01 06:42:05] [INFO] 📋 Backend hoàn thành 100% - UI Material Design mới!
+[2025-08-01 06:42:05] [INFO] 🔧 Enhanced with NavigationManager, ApplicationConfig, and Logger
+[2025-08-01 06:43:26] [SYSTEM] Event: Application Shutdown | Details: User requested application close
+[2025-08-01 06:43:26] [INFO] 👋 OOPSH Application đã tắt!
+[2025-08-01 06:44:54] [SYSTEM] Event: Application Launch | Details: Starting OOPSH v2.0
+[2025-08-01 06:44:54] [INFO] Initializing OOPSH Application v2.0
+[2025-08-01 06:44:54] [DEBUG] Application Configuration:
+[2025-08-01 06:44:54] [DEBUG] Application Configuration:
+  app.data.directory = data
+  app.theme = material-design
+  app.window.width = 1200
+  app.title = OOPSH - Hệ thống sát hạch bằng lái xe
+  app.window.height = 800
+  app.language = vi
+  app.session.timeout = 30
+  app.timezone = Asia/Ho_Chi_Minh
+  app.log.level = INFO
+
+[2025-08-01 06:44:54] [INFO] Primary stage configured successfully
+[2025-08-01 06:44:55] [INFO] Login screen displayed successfully
+[2025-08-01 06:44:55] [SYSTEM] Event: Application Started | Details: OOPSH v2.0 with enhanced architecture
+[2025-08-01 06:44:55] [INFO] 🎨 OOPSH Material Design 3.0 Application đã khởi động!
+[2025-08-01 06:44:55] [INFO] 📋 Backend hoàn thành 100% - UI Material Design mới!
+[2025-08-01 06:44:55] [INFO] 🔧 Enhanced with NavigationManager, ApplicationConfig, and Logger
+[2025-08-01 06:46:56] [SYSTEM] Event: Application Shutdown | Details: User requested application close
+[2025-08-01 06:46:56] [INFO] 👋 OOPSH Application đã tắt!
+[2025-08-01 06:52:08] [SYSTEM] Event: Application Launch | Details: Starting OOPSH v2.0
+[2025-08-01 06:52:08] [INFO] Initializing OOPSH Application v2.0
+[2025-08-01 06:52:08] [DEBUG] Application Configuration:
+[2025-08-01 06:52:08] [DEBUG] Application Configuration:
+  app.data.directory = data
+  app.theme = material-design
+  app.window.width = 1200
+  app.title = OOPSH - Hệ thống sát hạch bằng lái xe
+  app.window.height = 800
+  app.language = vi
+  app.session.timeout = 30
+  app.timezone = Asia/Ho_Chi_Minh
+  app.log.level = INFO
+
+[2025-08-01 06:52:08] [INFO] Primary stage configured successfully
+[2025-08-01 06:52:10] [INFO] Login screen displayed successfully
+[2025-08-01 06:52:10] [SYSTEM] Event: Application Started | Details: OOPSH v2.0 with enhanced architecture
+[2025-08-01 06:52:10] [INFO] 🎨 OOPSH Material Design 3.0 Application đã khởi động!
+[2025-08-01 06:52:10] [INFO] 📋 Backend hoàn thành 100% - UI Material Design mới!
+[2025-08-01 06:52:10] [INFO] 🔧 Enhanced with NavigationManager, ApplicationConfig, and Logger
+[2025-08-01 06:53:22] [SYSTEM] Event: Application Shutdown | Details: User requested application close
+[2025-08-01 06:53:22] [INFO] 👋 OOPSH Application đã tắt!
+[2025-08-01 06:53:34] [SYSTEM] Event: Application Launch | Details: Starting OOPSH v2.0
+[2025-08-01 06:53:35] [INFO] Initializing OOPSH Application v2.0
+[2025-08-01 06:53:35] [DEBUG] Application Configuration:
+[2025-08-01 06:53:35] [DEBUG] Application Configuration:
+  app.data.directory = data
+  app.theme = material-design
+  app.window.width = 1200
+  app.title = OOPSH - Hệ thống sát hạch bằng lái xe
+  app.window.height = 800
+  app.language = vi
+  app.session.timeout = 30
+  app.timezone = Asia/Ho_Chi_Minh
+  app.log.level = INFO
+
+[2025-08-01 06:53:35] [INFO] Primary stage configured successfully
+[2025-08-01 06:53:36] [INFO] Login screen displayed successfully
+[2025-08-01 06:53:36] [SYSTEM] Event: Application Started | Details: OOPSH v2.0 with enhanced architecture
+[2025-08-01 06:53:36] [INFO] 🎨 OOPSH Material Design 3.0 Application đã khởi động!
+[2025-08-01 06:53:36] [INFO] 📋 Backend hoàn thành 100% - UI Material Design mới!
+[2025-08-01 06:53:36] [INFO] 🔧 Enhanced with NavigationManager, ApplicationConfig, and Logger
+[2025-08-01 06:53:55] [SYSTEM] Event: Application Shutdown | Details: User requested application close
+[2025-08-01 06:53:55] [INFO] 👋 OOPSH Application đã tắt!
+[2025-08-01 06:54:36] [SYSTEM] Event: Application Launch | Details: Starting OOPSH v2.0
+[2025-08-01 06:54:36] [INFO] Initializing OOPSH Application v2.0
+[2025-08-01 06:54:36] [DEBUG] Application Configuration:
+[2025-08-01 06:54:36] [DEBUG] Application Configuration:
+  app.data.directory = data
+  app.theme = material-design
+  app.window.width = 1200
+  app.title = OOPSH - Hệ thống sát hạch bằng lái xe
+  app.window.height = 800
+  app.language = vi
+  app.session.timeout = 30
+  app.timezone = Asia/Ho_Chi_Minh
+  app.log.level = INFO
+
+[2025-08-01 06:54:36] [INFO] Primary stage configured successfully
+[2025-08-01 06:54:38] [INFO] Login screen displayed successfully
+[2025-08-01 06:54:38] [SYSTEM] Event: Application Started | Details: OOPSH v2.0 with enhanced architecture
+[2025-08-01 06:54:38] [INFO] 🎨 OOPSH Material Design 3.0 Application đã khởi động!
+[2025-08-01 06:54:38] [INFO] 📋 Backend hoàn thành 100% - UI Material Design mới!
+[2025-08-01 06:54:38] [INFO] 🔧 Enhanced with NavigationManager, ApplicationConfig, and Logger
+[2025-08-01 06:55:36] [SYSTEM] Event: Application Shutdown | Details: User requested application close
+[2025-08-01 06:55:36] [INFO] 👋 OOPSH Application đã tắt!
+[2025-08-01 06:56:34] [SYSTEM] Event: Application Launch | Details: Starting OOPSH v2.0
+[2025-08-01 06:56:34] [INFO] Initializing OOPSH Application v2.0
+[2025-08-01 06:56:35] [DEBUG] Application Configuration:
+[2025-08-01 06:56:35] [DEBUG] Application Configuration:
+  app.data.directory = data
+  app.theme = material-design
+  app.window.width = 1200
+  app.title = OOPSH - Hệ thống sát hạch bằng lái xe
+  app.window.height = 800
+  app.language = vi
+  app.session.timeout = 30
+  app.timezone = Asia/Ho_Chi_Minh
+  app.log.level = INFO
+
+[2025-08-01 06:56:35] [INFO] Primary stage configured successfully
+[2025-08-01 06:56:37] [INFO] Login screen displayed successfully
+[2025-08-01 06:56:37] [SYSTEM] Event: Application Started | Details: OOPSH v2.0 with enhanced architecture
+[2025-08-01 06:56:37] [INFO] 🎨 OOPSH Material Design 3.0 Application đã khởi động!
+[2025-08-01 06:56:37] [INFO] 📋 Backend hoàn thành 100% - UI Material Design mới!
+[2025-08-01 06:56:37] [INFO] 🔧 Enhanced with NavigationManager, ApplicationConfig, and Logger
+[2025-08-01 07:01:27] [SYSTEM] Event: Application Launch | Details: Starting OOPSH v2.0
+[2025-08-01 07:01:27] [INFO] Initializing OOPSH Application v2.0
+[2025-08-01 07:01:27] [DEBUG] Application Configuration:
+[2025-08-01 07:01:27] [DEBUG] Application Configuration:
+  app.data.directory = data
+  app.theme = material-design
+  app.window.width = 1200
+  app.title = OOPSH - Hệ thống sát hạch bằng lái xe
+  app.window.height = 800
+  app.language = vi
+  app.session.timeout = 30
+  app.timezone = Asia/Ho_Chi_Minh
+  app.log.level = INFO
+
+[2025-08-01 07:01:27] [INFO] Primary stage configured successfully
+[2025-08-01 07:01:30] [INFO] Login screen displayed successfully
+[2025-08-01 07:01:30] [SYSTEM] Event: Application Started | Details: OOPSH v2.0 with enhanced architecture
+[2025-08-01 07:01:30] [INFO] 🎨 OOPSH Material Design 3.0 Application đã khởi động!
+[2025-08-01 07:01:30] [INFO] 📋 Backend hoàn thành 100% - UI Material Design mới!
+[2025-08-01 07:01:30] [INFO] 🔧 Enhanced with NavigationManager, ApplicationConfig, and Logger
+[2025-08-01 07:01:34] [SYSTEM] Event: Application Shutdown | Details: User requested application close
+[2025-08-01 07:01:34] [INFO] 👋 OOPSH Application đã tắt!
+[2025-08-01 07:06:29] [SYSTEM] Event: Application Shutdown | Details: User requested application close
+[2025-08-01 07:06:29] [INFO] 👋 OOPSH Application đã tắt!
+[2025-08-01 07:09:19] [SYSTEM] Event: Application Launch | Details: Starting OOPSH v2.0
+[2025-08-01 07:09:19] [INFO] Initializing OOPSH Application v2.0
+[2025-08-01 07:09:19] [DEBUG] Application Configuration:
+[2025-08-01 07:09:19] [DEBUG] Application Configuration:
+  app.data.directory = data
+  app.theme = material-design
+  app.window.width = 1200
+  app.title = OOPSH - Hệ thống sát hạch bằng lái xe
+  app.window.height = 800
+  app.language = vi
+  app.session.timeout = 30
+  app.timezone = Asia/Ho_Chi_Minh
+  app.log.level = INFO
+
+[2025-08-01 07:09:19] [INFO] Primary stage configured successfully
+[2025-08-01 07:09:20] [INFO] Login screen displayed successfully
+[2025-08-01 07:09:20] [SYSTEM] Event: Application Started | Details: OOPSH v2.0 with enhanced architecture
+[2025-08-01 07:09:20] [INFO] 🎨 OOPSH Material Design 3.0 Application đã khởi động!
+[2025-08-01 07:09:20] [INFO] 📋 Backend hoàn thành 100% - UI Material Design mới!
+[2025-08-01 07:09:20] [INFO] 🔧 Enhanced with NavigationManager, ApplicationConfig, and Logger
+[2025-08-01 07:15:28] [SYSTEM] Event: Application Shutdown | Details: User requested application close
+[2025-08-01 07:15:28] [INFO] 👋 OOPSH Application đã tắt!
+[2025-08-01 07:23:19] [SYSTEM] Event: Application Launch | Details: Starting OOPSH v2.0
+[2025-08-01 07:23:19] [INFO] Initializing OOPSH Application v2.0
+[2025-08-01 07:23:19] [DEBUG] Application Configuration:
+[2025-08-01 07:23:19] [DEBUG] Application Configuration:
+  app.data.directory = data
+  app.theme = material-design
+  app.window.width = 1200
+  app.title = OOPSH - Hệ thống sát hạch bằng lái xe
+  app.window.height = 800
+  app.language = vi
+  app.session.timeout = 30
+  app.timezone = Asia/Ho_Chi_Minh
+  app.log.level = INFO
+
+[2025-08-01 07:23:19] [INFO] Primary stage configured successfully
+[2025-08-01 07:23:22] [INFO] Login screen displayed successfully
+[2025-08-01 07:23:22] [SYSTEM] Event: Application Started | Details: OOPSH v2.0 with enhanced architecture
+[2025-08-01 07:23:22] [INFO] 🎨 OOPSH Material Design 3.0 Application đã khởi động!
+[2025-08-01 07:23:22] [INFO] 📋 Backend hoàn thành 100% - UI Material Design mới!
+[2025-08-01 07:23:22] [INFO] 🔧 Enhanced with NavigationManager, ApplicationConfig, and Logger
+[2025-08-01 07:23:35] [SYSTEM] Event: Application Shutdown | Details: User requested application close
+[2025-08-01 07:23:35] [INFO] 👋 OOPSH Application đã tắt!
+[2025-08-01 07:23:43] [SYSTEM] Event: Application Launch | Details: Starting OOPSH v2.0
+[2025-08-01 07:23:43] [INFO] Initializing OOPSH Application v2.0
+[2025-08-01 07:23:43] [DEBUG] Application Configuration:
+[2025-08-01 07:23:43] [DEBUG] Application Configuration:
+  app.data.directory = data
+  app.theme = material-design
+  app.window.width = 1200
+  app.title = OOPSH - Hệ thống sát hạch bằng lái xe
+  app.window.height = 800
+  app.language = vi
+  app.session.timeout = 30
+  app.timezone = Asia/Ho_Chi_Minh
+  app.log.level = INFO
+
+[2025-08-01 07:23:43] [INFO] Primary stage configured successfully
+[2025-08-01 07:23:45] [INFO] Login screen displayed successfully
+[2025-08-01 07:23:45] [SYSTEM] Event: Application Started | Details: OOPSH v2.0 with enhanced architecture
+[2025-08-01 07:23:45] [INFO] 🎨 OOPSH Material Design 3.0 Application đã khởi động!
+[2025-08-01 07:23:45] [INFO] 📋 Backend hoàn thành 100% - UI Material Design mới!
+[2025-08-01 07:23:45] [INFO] 🔧 Enhanced with NavigationManager, ApplicationConfig, and Logger
+[2025-08-01 07:23:49] [SYSTEM] Event: Application Shutdown | Details: User requested application close
+[2025-08-01 07:23:49] [INFO] 👋 OOPSH Application đã tắt!
+[2025-08-01 07:25:36] [SYSTEM] Event: Application Launch | Details: Starting OOPSH v2.0
+[2025-08-01 07:25:36] [INFO] Initializing OOPSH Application v2.0
+[2025-08-01 07:25:36] [DEBUG] Application Configuration:
+[2025-08-01 07:25:36] [DEBUG] Application Configuration:
+  app.data.directory = data
+  app.theme = material-design
+  app.window.width = 1200
+  app.title = OOPSH - Hệ thống sát hạch bằng lái xe
+  app.window.height = 800
+  app.language = vi
+  app.session.timeout = 30
+  app.timezone = Asia/Ho_Chi_Minh
+  app.log.level = INFO
+
+[2025-08-01 07:25:36] [INFO] Primary stage configured successfully
+[2025-08-01 07:25:40] [INFO] Login screen displayed successfully
+[2025-08-01 07:25:40] [SYSTEM] Event: Application Started | Details: OOPSH v2.0 with enhanced architecture
+[2025-08-01 07:25:40] [INFO] 🎨 OOPSH Material Design 3.0 Application đã khởi động!
+[2025-08-01 07:25:40] [INFO] 📋 Backend hoàn thành 100% - UI Material Design mới!
+[2025-08-01 07:25:40] [INFO] 🔧 Enhanced with NavigationManager, ApplicationConfig, and Logger
+[2025-08-01 07:26:22] [SYSTEM] Event: Application Shutdown | Details: User requested application close
+[2025-08-01 07:26:22] [INFO] 👋 OOPSH Application đã tắt!
+[2025-08-01 08:40:32] [SYSTEM] Event: Application Launch | Details: Starting OOPSH v2.0
+[2025-08-01 08:40:32] [INFO] Initializing OOPSH Application v2.0
+[2025-08-01 08:40:32] [DEBUG] Application Configuration:
+[2025-08-01 08:40:32] [DEBUG] Application Configuration:
+  app.data.directory = data
+  app.theme = material-design
+  app.window.width = 1200
+  app.title = OOPSH - Hệ thống sát hạch bằng lái xe
+  app.window.height = 800
+  app.language = vi
+  app.session.timeout = 30
+  app.timezone = Asia/Ho_Chi_Minh
+  app.log.level = INFO
+
+[2025-08-01 08:40:32] [INFO] Primary stage configured successfully
+[2025-08-01 08:40:33] [INFO] Login screen displayed successfully
+[2025-08-01 08:40:33] [SYSTEM] Event: Application Started | Details: OOPSH v2.0 with enhanced architecture
+[2025-08-01 08:40:33] [INFO] 🎨 OOPSH Material Design 3.0 Application đã khởi động!
+[2025-08-01 08:40:33] [INFO] 📋 Backend hoàn thành 100% - UI Material Design mới!
+[2025-08-01 08:40:33] [INFO] 🔧 Enhanced with NavigationManager, ApplicationConfig, and Logger
+[2025-08-01 08:41:13] [SYSTEM] Event: Application Shutdown | Details: User requested application close
+[2025-08-01 08:41:13] [INFO] 👋 OOPSH Application đã tắt!
+[2025-08-01 08:47:10] [SYSTEM] Event: Application Launch | Details: Starting OOPSH v2.0
+[2025-08-01 08:47:10] [INFO] Initializing OOPSH Application v2.0
+[2025-08-01 08:47:10] [DEBUG] Application Configuration:
+[2025-08-01 08:47:10] [DEBUG] Application Configuration:
+  app.data.directory = data
+  app.theme = material-design
+  app.window.width = 1200
+  app.title = OOPSH - Hệ thống sát hạch bằng lái xe
+  app.window.height = 800
+  app.language = vi
+  app.session.timeout = 30
+  app.timezone = Asia/Ho_Chi_Minh
+  app.log.level = INFO
+
+[2025-08-01 08:47:10] [INFO] Primary stage configured successfully
+[2025-08-01 08:47:11] [INFO] Login screen displayed successfully
+[2025-08-01 08:47:11] [SYSTEM] Event: Application Started | Details: OOPSH v2.0 with enhanced architecture
+[2025-08-01 08:47:11] [INFO] 🎨 OOPSH Material Design 3.0 Application đã khởi động!
+[2025-08-01 08:47:11] [INFO] 📋 Backend hoàn thành 100% - UI Material Design mới!
+[2025-08-01 08:47:11] [INFO] 🔧 Enhanced with NavigationManager, ApplicationConfig, and Logger
+[2025-08-01 08:48:23] [SYSTEM] Event: Application Shutdown | Details: User requested application close
+[2025-08-01 08:48:23] [INFO] 👋 OOPSH Application đã tắt!
+[2025-08-01 08:51:46] [SYSTEM] Event: Application Launch | Details: Starting OOPSH v2.0
+[2025-08-01 08:51:46] [INFO] Initializing OOPSH Application v2.0
+[2025-08-01 08:51:46] [DEBUG] Application Configuration:
+[2025-08-01 08:51:46] [DEBUG] Application Configuration:
+  app.data.directory = data
+  app.theme = material-design
+  app.window.width = 1200
+  app.title = OOPSH - Hệ thống sát hạch bằng lái xe
+  app.window.height = 800
+  app.language = vi
+  app.session.timeout = 30
+  app.timezone = Asia/Ho_Chi_Minh
+  app.log.level = INFO
+
+[2025-08-01 08:51:46] [INFO] Primary stage configured successfully
+[2025-08-01 08:51:48] [INFO] Login screen displayed successfully
+[2025-08-01 08:51:48] [SYSTEM] Event: Application Started | Details: OOPSH v2.0 with enhanced architecture
+[2025-08-01 08:51:48] [INFO] 🎨 OOPSH Material Design 3.0 Application đã khởi động!
+[2025-08-01 08:51:48] [INFO] 📋 Backend hoàn thành 100% - UI Material Design mới!
+[2025-08-01 08:51:48] [INFO] 🔧 Enhanced with NavigationManager, ApplicationConfig, and Logger
+[2025-08-01 08:56:12] [SYSTEM] Event: Application Shutdown | Details: User requested application close
+[2025-08-01 08:56:12] [INFO] 👋 OOPSH Application đã tắt!
+[2025-08-01 08:57:04] [SYSTEM] Event: Application Launch | Details: Starting OOPSH v2.0
+[2025-08-01 08:57:04] [INFO] Initializing OOPSH Application v2.0
+[2025-08-01 08:57:04] [DEBUG] Application Configuration:
+[2025-08-01 08:57:04] [DEBUG] Application Configuration:
+  app.data.directory = data
+  app.theme = material-design
+  app.window.width = 1200
+  app.title = OOPSH - Hệ thống sát hạch bằng lái xe
+  app.window.height = 800
+  app.language = vi
+  app.session.timeout = 30
+  app.timezone = Asia/Ho_Chi_Minh
+  app.log.level = INFO
+
+[2025-08-01 08:57:04] [INFO] Primary stage configured successfully
+[2025-08-01 08:57:05] [INFO] Login screen displayed successfully
+[2025-08-01 08:57:05] [SYSTEM] Event: Application Started | Details: OOPSH v2.0 with enhanced architecture
+[2025-08-01 08:57:05] [INFO] 🎨 OOPSH Material Design 3.0 Application đã khởi động!
+[2025-08-01 08:57:05] [INFO] 📋 Backend hoàn thành 100% - UI Material Design mới!
+[2025-08-01 08:57:05] [INFO] 🔧 Enhanced with NavigationManager, ApplicationConfig, and Logger
+[2025-08-01 08:57:36] [SYSTEM] Event: Application Shutdown | Details: User requested application close
+[2025-08-01 08:57:36] [INFO] 👋 OOPSH Application đã tắt!
+[2025-08-01 08:59:35] [SYSTEM] Event: Application Launch | Details: Starting OOPSH v2.0
+[2025-08-01 08:59:35] [INFO] Initializing OOPSH Application v2.0
+[2025-08-01 08:59:35] [DEBUG] Application Configuration:
+[2025-08-01 08:59:35] [DEBUG] Application Configuration:
+  app.data.directory = data
+  app.theme = material-design
+  app.window.width = 1200
+  app.title = OOPSH - Hệ thống sát hạch bằng lái xe
+  app.window.height = 800
+  app.language = vi
+  app.session.timeout = 30
+  app.timezone = Asia/Ho_Chi_Minh
+  app.log.level = INFO
+
+[2025-08-01 08:59:35] [INFO] Primary stage configured successfully
+[2025-08-01 08:59:35] [INFO] Login screen displayed successfully
+[2025-08-01 08:59:35] [SYSTEM] Event: Application Started | Details: OOPSH v2.0 with enhanced architecture
+[2025-08-01 08:59:35] [INFO] 🎨 OOPSH Material Design 3.0 Application đã khởi động!
+[2025-08-01 08:59:35] [INFO] 📋 Backend hoàn thành 100% - UI Material Design mới!
+[2025-08-01 08:59:35] [INFO] 🔧 Enhanced with NavigationManager, ApplicationConfig, and Logger
+[2025-08-01 08:59:53] [SYSTEM] Event: Application Shutdown | Details: User requested application close
+[2025-08-01 08:59:53] [INFO] 👋 OOPSH Application đã tắt!
+[2025-08-01 09:01:51] [SYSTEM] Event: Application Launch | Details: Starting OOPSH v2.0
+[2025-08-01 09:01:51] [INFO] Initializing OOPSH Application v2.0
+[2025-08-01 09:01:51] [DEBUG] Application Configuration:
+[2025-08-01 09:01:51] [DEBUG] Application Configuration:
+  app.data.directory = data
+  app.theme = material-design
+  app.window.width = 1200
+  app.title = OOPSH - Hệ thống sát hạch bằng lái xe
+  app.window.height = 800
+  app.language = vi
+  app.session.timeout = 30
+  app.timezone = Asia/Ho_Chi_Minh
+  app.log.level = INFO
+
+[2025-08-01 09:01:51] [INFO] Primary stage configured successfully
+[2025-08-01 09:01:52] [INFO] Login screen displayed successfully
+[2025-08-01 09:01:52] [SYSTEM] Event: Application Started | Details: OOPSH v2.0 with enhanced architecture
+[2025-08-01 09:01:52] [INFO] 🎨 OOPSH Material Design 3.0 Application đã khởi động!
+[2025-08-01 09:01:52] [INFO] 📋 Backend hoàn thành 100% - UI Material Design mới!
+[2025-08-01 09:01:52] [INFO] 🔧 Enhanced with NavigationManager, ApplicationConfig, and Logger
+[2025-08-01 09:06:41] [SYSTEM] Event: Application Shutdown | Details: User requested application close
+[2025-08-01 09:06:41] [INFO] 👋 OOPSH Application đã tắt!
+[2025-08-01 09:07:50] [SYSTEM] Event: Application Launch | Details: Starting OOPSH v2.0
+[2025-08-01 09:07:50] [INFO] Initializing OOPSH Application v2.0
+[2025-08-01 09:07:50] [DEBUG] Application Configuration:
+[2025-08-01 09:07:50] [DEBUG] Application Configuration:
+  app.data.directory = data
+  app.theme = material-design
+  app.window.width = 1200
+  app.title = OOPSH - Hệ thống sát hạch bằng lái xe
+  app.window.height = 800
+  app.language = vi
+  app.session.timeout = 30
+  app.timezone = Asia/Ho_Chi_Minh
+  app.log.level = INFO
+
+[2025-08-01 09:07:50] [INFO] Primary stage configured successfully
+[2025-08-01 09:07:54] [INFO] Login screen displayed successfully
+[2025-08-01 09:07:54] [SYSTEM] Event: Application Started | Details: OOPSH v2.0 with enhanced architecture
+[2025-08-01 09:07:54] [INFO] 🎨 OOPSH Material Design 3.0 Application đã khởi động!
+[2025-08-01 09:07:54] [INFO] 📋 Backend hoàn thành 100% - UI Material Design mới!
+[2025-08-01 09:07:54] [INFO] 🔧 Enhanced with NavigationManager, ApplicationConfig, and Logger
+[2025-08-01 09:08:08] [USER_ACTION] User: thisinh | Action: CandidateDashboardScreen | Details: Screen initialized
+[2025-08-01 09:08:08] [INFO] CandidateDashboardScreen initialized successfully
+[2025-08-01 09:10:57] [SYSTEM] Event: Application Shutdown | Details: User requested application close
+[2025-08-01 09:10:57] [INFO] 👋 OOPSH Application đã tắt!
+[2025-08-01 09:14:20] [SYSTEM] Event: Application Launch | Details: Starting OOPSH v2.0
+[2025-08-01 09:14:20] [INFO] Initializing OOPSH Application v2.0
+[2025-08-01 09:14:20] [DEBUG] Application Configuration:
+[2025-08-01 09:14:20] [DEBUG] Application Configuration:
+  app.data.directory = data
+  app.theme = material-design
+  app.window.width = 1200
+  app.title = OOPSH - Hệ thống sát hạch bằng lái xe
+  app.window.height = 800
+  app.language = vi
+  app.session.timeout = 30
+  app.timezone = Asia/Ho_Chi_Minh
+  app.log.level = INFO
+
+[2025-08-01 09:14:20] [INFO] Primary stage configured successfully
+[2025-08-01 09:14:22] [INFO] Login screen displayed successfully
+[2025-08-01 09:14:22] [SYSTEM] Event: Application Started | Details: OOPSH v2.0 with enhanced architecture
+[2025-08-01 09:14:22] [INFO] 🎨 OOPSH Material Design 3.0 Application đã khởi động!
+[2025-08-01 09:14:22] [INFO] 📋 Backend hoàn thành 100% - UI Material Design mới!
+[2025-08-01 09:14:22] [INFO] 🔧 Enhanced with NavigationManager, ApplicationConfig, and Logger
+[2025-08-01 09:14:33] [USER_ACTION] User: giamthi | Action: ExaminerDashboardScreen | Details: Screen initialized
+[2025-08-01 09:14:33] [DATABASE] Operation: SELECT | Table: results | Details: Getting pending grading count for examiner: giamthi
+[2025-08-01 09:14:33] [INFO] Found 0 pending grading items for examiner
+[2025-08-01 09:14:33] [DATABASE] Operation: SELECT | Table: session_reports | Details: Getting completed sessions count for examiner: giamthi
+[2025-08-01 09:14:33] [ERROR] Error getting completed sessions count - For input string: ""
+[2025-08-01 09:14:33] [ERROR]   at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+[2025-08-01 09:14:33] [ERROR]   at java.base/java.lang.Integer.parseInt(Integer.java:565)
+[2025-08-01 09:14:33] [ERROR]   at java.base/java.lang.Integer.parseInt(Integer.java:685)
+[2025-08-01 09:14:33] [ERROR]   at com.pocitaco.oopsh.dao.SessionReportDAO.elementToEntity(SessionReportDAO.java:26)
+[2025-08-01 09:14:33] [ERROR]   at com.pocitaco.oopsh.dao.SessionReportDAO.findAll(SessionReportDAO.java:190)
+[2025-08-01 09:14:33] [ERROR]   at com.pocitaco.oopsh.dao.SessionReportDAO.getAll(SessionReportDAO.java:199)
+[2025-08-01 09:14:33] [ERROR]   at com.pocitaco.oopsh.ui.screens.ExaminerDashboardScreen.getCompletedSessionsCount(ExaminerDashboardScreen.java:540)
+[2025-08-01 09:14:33] [ERROR]   at com.pocitaco.oopsh.ui.screens.ExaminerDashboardScreen.createStatsRow(ExaminerDashboardScreen.java:263)
+[2025-08-01 09:14:33] [ERROR]   at com.pocitaco.oopsh.ui.screens.ExaminerDashboardScreen.loadDashboardContent(ExaminerDashboardScreen.java:225)
+[2025-08-01 09:14:33] [ERROR]   at com.pocitaco.oopsh.ui.screens.ExaminerDashboardScreen.initializeUI(ExaminerDashboardScreen.java:93)
+[2025-08-01 09:14:33] [ERROR]   at com.pocitaco.oopsh.ui.screens.ExaminerDashboardScreen.<init>(ExaminerDashboardScreen.java:63)
+[2025-08-01 09:14:33] [ERROR]   at com.pocitaco.oopsh.ui.screens.LoginScreen.lambda$handleLogin$3(LoginScreen.java:275)
+[2025-08-01 09:14:33] [ERROR]   at java.base/java.util.Optional.ifPresentOrElse(Optional.java:196)
+[2025-08-01 09:14:33] [ERROR]   at com.pocitaco.oopsh.ui.screens.LoginScreen.handleLogin(LoginScreen.java:238)
+[2025-08-01 09:14:33] [ERROR]   at com.pocitaco.oopsh.ui.screens.LoginScreen.lambda$createLoginCard$0(LoginScreen.java:115)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/javafx.event.Event.fireEvent(Event.java:198)
+[2025-08-01 09:14:33] [ERROR]   at javafx.graphics/javafx.scene.Node.fireEvent(Node.java:8792)
+[2025-08-01 09:14:33] [ERROR]   at javafx.controls/javafx.scene.control.Button.fire(Button.java:203)
+[2025-08-01 09:14:33] [ERROR]   at javafx.controls/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:208)
+[2025-08-01 09:14:33] [ERROR]   at javafx.controls/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+[2025-08-01 09:14:33] [ERROR]   at javafx.base/javafx.event.Event.fireEvent(Event.java:198)
+[2025-08-01 09:14:33] [ERROR]   at javafx.graphics/javafx.scene.Scene$MouseHandler.process(Scene.java:3897)
+[2025-08-01 09:14:33] [ERROR]   at javafx.graphics/javafx.scene.Scene.processMouseEvent(Scene.java:1878)
+[2025-08-01 09:14:33] [ERROR]   at javafx.graphics/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2623)
+[2025-08-01 09:14:33] [ERROR]   at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+[2025-08-01 09:14:33] [ERROR]   at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+[2025-08-01 09:14:33] [ERROR]   at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+[2025-08-01 09:14:33] [ERROR]   at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+[2025-08-01 09:14:33] [ERROR]   at javafx.graphics/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+[2025-08-01 09:14:33] [ERROR]   at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+[2025-08-01 09:14:33] [ERROR]   at javafx.graphics/com.sun.glass.ui.View.handleMouseEvent(View.java:557)
+[2025-08-01 09:14:33] [ERROR]   at javafx.graphics/com.sun.glass.ui.View.notifyMouse(View.java:943)
+[2025-08-01 09:14:33] [ERROR]   at javafx.graphics/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+[2025-08-01 09:14:33] [ERROR]   at javafx.graphics/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:184)
+[2025-08-01 09:14:33] [ERROR]   at java.base/java.lang.Thread.run(Thread.java:1575)
+[2025-08-01 09:14:33] [DATABASE] Operation: SELECT | Table: results | Details: Getting average score for examiner: giamthi
+[2025-08-01 09:14:33] [INFO] Average score for examiner: 0.0
+[2025-08-01 09:14:33] [INFO] ExaminerDashboardScreen initialized successfully
+[2025-08-01 09:15:46] [SYSTEM] Event: Application Shutdown | Details: User requested application close
+[2025-08-01 09:15:46] [INFO] 👋 OOPSH Application đã tắt!
